@@ -88,3 +88,38 @@ def parse_workbook(xlsx_path: str, config: dict) -> dict:
     }
 
     return {"meta": meta, "records": records}
+
+
+import argparse
+import json
+import os
+
+from pricing_pipeline.config import load_source_config
+
+
+def run_pipeline(xlsx_path: str, config_path: str, output_path: str) -> dict:
+    config = load_source_config(config_path)
+    result = parse_workbook(xlsx_path, config)
+
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+
+    return result
+
+
+def _build_arg_parser():
+    parser = argparse.ArgumentParser(description="Parse a raw pricing-comparison Excel file into normalized JSON.")
+    parser.add_argument("--xlsx", required=True, help="Path to the raw Excel file")
+    parser.add_argument("--config", required=True, help="Path to the source config JSON")
+    parser.add_argument("--out", required=True, help="Path to write the normalized JSON")
+    return parser
+
+
+def main(argv=None):
+    args = _build_arg_parser().parse_args(argv)
+    run_pipeline(args.xlsx, args.config, args.out)
+
+
+if __name__ == "__main__":
+    main()

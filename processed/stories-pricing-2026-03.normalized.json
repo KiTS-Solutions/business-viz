@@ -1,0 +1,5641 @@
+{
+  "meta": {
+    "client": "Stories",
+    "report_date": "2026-03-01",
+    "currency": "LBP",
+    "fx_usd_rate": 89600,
+    "fx_rate_date": "2026-07-20",
+    "fx_source": "lira-rate.com / lbprate.com market average (parallel/market rate)",
+    "own_brand": "Stories",
+    "competitors": [
+      "Espresso Lab",
+      "Dunkin Donuts",
+      "Joe & the Juice",
+      "Starbucks"
+    ],
+    "generated_from": "raw-data/Product Pricing Comparison March 2026 (1).xlsx"
+  },
+  "records": [
+    {
+      "category": "Black Coffee",
+      "product": "Double Espresso Macchiato",
+      "brand": "Stories",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Double Espresso SMALL",
+      "brand": "Stories",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Double Espresso LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 360000,
+      "price_usd": 4.02
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Double Espresso LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 358000,
+      "price_usd": 4.0
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Double Espresso LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Decaf Espresso",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 270000,
+      "price_usd": 3.01
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Espresso Macchiato",
+      "brand": "Stories",
+      "price_lbp": 250000,
+      "price_usd": 2.79
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano SMALL",
+      "brand": "Stories",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 358000,
+      "price_usd": 4.0
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano LARGE",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 315000,
+      "price_usd": 3.52
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 402750,
+      "price_usd": 4.49
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Americano LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Original Blend MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 360000,
+      "price_usd": 4.02
+    },
+    {
+      "category": "Black Coffee",
+      "product": "Original Blend LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 405000,
+      "price_usd": 4.52
+    },
+    {
+      "category": "Brewed Coffee",
+      "product": "Lebanese Coffee LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 270000,
+      "price_usd": 3.01
+    },
+    {
+      "category": "Brewed Coffee",
+      "product": "Filtered Coffee SMALL",
+      "brand": "Stories",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Brewed Coffee",
+      "product": "Filtered Coffee MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Brewed Coffee",
+      "product": "Filtered Coffee LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Brewed Coffee",
+      "product": "Drip Coffee MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 384850,
+      "price_usd": 4.3
+    },
+    {
+      "category": "Brewed Coffee",
+      "product": "Drip Coffee LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 420650,
+      "price_usd": 4.69
+    },
+    {
+      "category": "Brewed Coffee",
+      "product": "Cold Brew",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino SMALL",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 360000,
+      "price_usd": 4.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 447500,
+      "price_usd": 4.99
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino Large",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino Large",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino Large",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino Large",
+      "brand": "Joe & the Juice",
+      "price_lbp": 492250,
+      "price_usd": 5.49
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cappuccino Large",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Mocha SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Mocha SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Mocha MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Mocha MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Mocha MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 501200,
+      "price_usd": 5.59
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Mocha MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Mocha LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Mocha LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Mocha LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 554900,
+      "price_usd": 6.19
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Mocha LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Mocha SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Mocha SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Mocha SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Mocha MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Mocha MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Mocha MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Mocha MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Mocha LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Mocha LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Mocha LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Chocolate Mocha MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "White Chocolate Mocha LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Gold Chocolate Mocha MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Matcha Latte SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Matcha Latte SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Matcha Latte MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Matcha Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Matcha Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 581750,
+      "price_usd": 6.49
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Matcha Latte LARGE",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Matcha Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Matcha Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 626500,
+      "price_usd": 6.99
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Matcha Latte LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Vanilla Matcha Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 626500,
+      "price_usd": 6.99
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Vanilla Matcha Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 671250,
+      "price_usd": 7.49
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Espresso SMALL",
+      "brand": "Stories",
+      "price_lbp": 250000,
+      "price_usd": 2.79
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Espresso SMALL",
+      "brand": "Espresso Lab",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Espresso MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 270000,
+      "price_usd": 3.01
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Espresso MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 313250,
+      "price_usd": 3.5
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Espresso LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 360000,
+      "price_usd": 4.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Espresso LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 358000,
+      "price_usd": 4.0
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Espresso LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 250000,
+      "price_usd": 2.79
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Double Shot SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Double Shot MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Double Shot LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Flat White",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Flat White",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Flat White",
+      "brand": "Joe & the Juice",
+      "price_lbp": 411700,
+      "price_usd": 4.59
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cortado",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cortado",
+      "brand": "Joe & the Juice",
+      "price_lbp": 411700,
+      "price_usd": 4.59
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Dulce De Leche SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Dulce De Leche MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Dulce De Leche LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Macchiato",
+      "brand": "Joe & the Juice",
+      "price_lbp": 358000,
+      "price_usd": 4.0
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Caramel Macchiato SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Caramel Macchiato SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Caramel Macchiato MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Caramel Macchiato MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Caramel Macchiato LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Caramel Macchiato LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte SMALL",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 360000,
+      "price_usd": 4.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 447500,
+      "price_usd": 4.99
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte LARGE",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 492250,
+      "price_usd": 5.49
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Latte LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 360000,
+      "price_usd": 4.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 447500,
+      "price_usd": 4.99
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate LARGE",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 501200,
+      "price_usd": 5.59
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Hot Chocolate LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Chocolate Milk SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Chocolate Milk MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Chocolate Milk LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cinnamon Roll Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Cinnamon Roll Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Toffeenut Latte Hot SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Toffeenut Latte Hot MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Hot Beverages",
+      "product": "Toffeenut Latte Hot LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Mocha Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Mocha Frap SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Mocha Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Mocha Frap MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Mocha Frap MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Mocha Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Mocha Frap LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Mocha Frap LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Espresso Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Espresso Frap SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Espresso Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Espresso Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Espresso Frap LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Frap SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Frap MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Frap MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Frap LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Frap LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Matcha Cream Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Matcha Cream Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Matcha Cream Frap MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Matcha Cream Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Matcha Cream Frap LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Vanilla Cream Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Vanilla Cream Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Vanilla Cream Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Cream Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Cream Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Cream Frap MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Cream Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Caramel Cream Frap LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Double Caramel Frappuccino SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Double Caramel Frappuccino MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Double Caramel Frappuccino LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Chocolate Cream Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Chocolate Cream Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Chocolate Cream Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "White Mocha Cream Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "White Mocha Cream Frap SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "White Mocha Cream Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "White Mocha Cream Frap MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "White Mocha Cream Frap MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "White Mocha Cream Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "White Mocha Cream Frap LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "White Mocha Cream Frap LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Gold Mocha Frap MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Gold Mocha Frap LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Coconut Coffee Frap MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Coconut Coffee Frap LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Hazelnut Coffee Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Hazelnut Coffee Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Hazelnut Coffee Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Coffee Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Coffee Frap SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 330000,
+      "price_usd": 3.68
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Coffee Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Coffee Frap MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Coffee Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Coffee Frap LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Coffee Frap LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 430000,
+      "price_usd": 4.8
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Strawberry Cream Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Strawberry Cream Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Strawberry Cream Frap MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Strawberry Cream Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Strawberry Cream Frap LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Toffee Nut Frap SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Toffee Nut Frap SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Toffee Nut Frap MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Toffee Nut Frap MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Toffee Nut Frap LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Toffee Nut Frap LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Lotus Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Lotus Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Salted Caramel Latte SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Salted Caramel Latte MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Salted Caramel Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Salted Caramel Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 554900,
+      "price_usd": 6.19
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Salted Caramel Latte LARGE",
+      "brand": "Stories",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Salted Caramel Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Salted Caramel Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 590700,
+      "price_usd": 6.59
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spanish Latte SMALL",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spanish Latte SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spanish Latte MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spanish Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spanish Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 626500,
+      "price_usd": 6.99
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spanish Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spanish Latte LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spanish Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 671250,
+      "price_usd": 7.49
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spanish Latte LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spiced Mango Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Spiced Mango Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Vanilla Latte SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Vanilla Latte MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 585000,
+      "price_usd": 6.53
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Vanilla Latte LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 720000,
+      "price_usd": 8.04
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Java Chip Frappuccino SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Java Chip Frappuccino MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Java Chip Frappuccino LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Strawberry & Cream Frappuccino SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Strawberry & Cream Frappuccino MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Strawberry & Cream Frappuccino LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Joe's Vanilla Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 554900,
+      "price_usd": 6.19
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Joe's Vanilla Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 590700,
+      "price_usd": 6.59
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Dunkalatte Mocha SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Dunkalatte Mocha MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Dunkalatte Mocha LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Dunkalatte Caramel SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Dunkalatte Caramel MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Dunkalatte Caramel LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Dunkaccino Caramel SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Dunkaccino Caramel MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Dunkaccino Caramel LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Hojicha Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Hojicha Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Marshmallow Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Marshmallow Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Tahini Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Tahini Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Matcha Sahlab",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Pistachio Latte SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Pistachio Latte MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Blended Drinks",
+      "product": "Pistachio Latte LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Brewed Coffee SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Brewed Coffee LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Coffee SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 360000,
+      "price_usd": 4.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Coffee MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Coffee LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte SMALL",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 405000,
+      "price_usd": 4.52
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 495000,
+      "price_usd": 5.52
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 447500,
+      "price_usd": 4.99
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte LARGE",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 585000,
+      "price_usd": 6.53
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 501200,
+      "price_usd": 5.59
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Latte LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Filter Coffee MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Filter Coffee LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Toffeenut Latte SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Toffeenut Latte MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Toffeenut Latte LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Toffeenut SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Toffeenut MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Toffeenut LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Dulce De Leche Latte SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Dulce De Leche Latte MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Dulce De Leche Latte LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Spanish Latte SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Spanish Latte SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Spanish Latte MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Spanish Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Spanish Latte MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Spanish Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 626500,
+      "price_usd": 6.99
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Spanish Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Spanish Latte LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Spanish Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 671250,
+      "price_usd": 7.49
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Spanish Latte LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Mocha Iced Latte SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Mocha Iced Latte MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Mocha Iced Latte LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Caramel Iced Latte SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Caramel Iced Latte MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Caramel Iced Latte LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Salted Caramel Latte SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Salted Caramel Latte MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Salted Caramel Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Salted Caramel Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 554900,
+      "price_usd": 6.19
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Salted Caramel Latte LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Salted Caramel Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Salted Caramel Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 590700,
+      "price_usd": 6.59
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Vanilla Iced Latte  SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Vanilla Iced Latte  MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Vanilla Iced Latte LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Joe's Iced Vanilla Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 554900,
+      "price_usd": 6.19
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Joe's Iced Vanilla Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 590700,
+      "price_usd": 6.59
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 720000,
+      "price_usd": 8.04
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced White Mocha LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Caramel Macchiato SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Caramel Macchiato SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Caramel Macchiato MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Caramel Macchiato MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Caramel Macchiato LARGE",
+      "brand": "Stories",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Caramel Macchiato LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Chocolate SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Chocolate MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Chocolate MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Chocolate LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Chocolate LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Latte SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Latte SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Latte MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Latte MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 540000,
+      "price_usd": 6.03
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 581750,
+      "price_usd": 6.49
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Latte LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 626500,
+      "price_usd": 6.99
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Matcha Latte LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Vanilla Matcha Latte MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 626500,
+      "price_usd": 6.99
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Vanilla Matcha Latte LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 671250,
+      "price_usd": 7.49
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Americano SMALL",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Americano MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Americano MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Americano MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 358000,
+      "price_usd": 4.0
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Americano LARGE",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Americano LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Americano LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 402750,
+      "price_usd": 4.49
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Drip Coffee MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 384850,
+      "price_usd": 4.3
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Drip Coffee LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 420650,
+      "price_usd": 4.69
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Mocha SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Mocha SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Mocha MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Mocha MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Mocha MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 501200,
+      "price_usd": 5.59
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Mocha MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Mocha LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Mocha LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Mocha LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 554900,
+      "price_usd": 6.19
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Mocha LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Gold Mocha MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Gold Mocha LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Cappuccino MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Cappuccino LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Double Shot Shaken SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Double Shot Shaken MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Double Shot Shaken LARGE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Bluenade",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Steamed Milk SMALL",
+      "brand": "Stories",
+      "price_lbp": 250000,
+      "price_usd": 2.79
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Steamed Milk MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Steamed Milk LARGE",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Lotus Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Lotus Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Pistachio Macchiato SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Pistachio Macchiato MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Iced Pistachio Macchiato LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Pistachio Iced Shaken Espresso SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Pistachio Iced Shaken Espresso MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Mixed Cold Beverages",
+      "product": "Pistachio Iced Shaken Espresso LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "TEA",
+      "product": "Organic Black Tea MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "TEA",
+      "product": "Organic Black Tea LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "TEA",
+      "product": "Organic Black Tea LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 270000,
+      "price_usd": 3.01
+    },
+    {
+      "category": "TEA",
+      "product": "Tea (Bombay Chai, Earl Grey, Chamomile, English Breakfast, Green, Lemon Grass & Orange, Mediterranean Caramel, Sweet Ginger, Southern Mint)",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "TEA",
+      "product": "Tea (Bombay Chai, Earl Grey, Chamomile, English Breakfast, Green, Lemon Grass & Orange, Mediterranean Caramel, Sweet Ginger, Southern Mint)",
+      "brand": "Joe & the Juice",
+      "price_lbp": 358000,
+      "price_usd": 4.0
+    },
+    {
+      "category": "TEA",
+      "product": "Tea (Earl Grey, Mint, Green) SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 250000,
+      "price_usd": 2.79
+    },
+    {
+      "category": "TEA",
+      "product": "Tea (Earl Grey, Mint, Green) LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "TEA",
+      "product": "TeaLate SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 405000,
+      "price_usd": 4.52
+    },
+    {
+      "category": "TEA",
+      "product": "TeaLate MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 495000,
+      "price_usd": 5.52
+    },
+    {
+      "category": "TEA",
+      "product": "TeaLate LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 675000,
+      "price_usd": 7.53
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Chai Tea Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Chai Tea Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "TEA",
+      "product": "Herbal Tea",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "TEA",
+      "product": "Herbal Tea",
+      "brand": "Espresso Lab",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "TEA",
+      "product": "Eslab Tea",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "TEA",
+      "product": "Eslab Tea",
+      "brand": "Espresso Lab",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "TEA",
+      "product": "Pink Matcha",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Tea SMALL",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Tea SMALL",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 315000,
+      "price_usd": 3.52
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Tea SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Tea MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Tea MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Tea MEDIUM",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Tea LARGE",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Tea LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 630000,
+      "price_usd": 7.03
+    },
+    {
+      "category": "TEA",
+      "product": "Iced Tea LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Signature",
+      "product": "Sky MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Signature",
+      "product": "Sky LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Signature",
+      "product": "Affogato",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Signature",
+      "product": "Kola Tonik",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Signature",
+      "product": "Yuzu Geisha",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Signature",
+      "product": "Mojito Hibiscus",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Signature",
+      "product": "Cranberry Hibiscus",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Signature",
+      "product": "Cinnamon Peach MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Signature",
+      "product": "Cinnamon Peach LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Signature",
+      "product": "Iced Chai Tea Latte MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Signature",
+      "product": "Iced Chai Tea Latte LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Signature",
+      "product": "Lemonade / Strawberry / Passion",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Signature",
+      "product": "Paragon Lime",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Signature",
+      "product": "Lime Breeze MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Signature",
+      "product": "Lime Breeze LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Signature",
+      "product": "Passion Fruit MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Signature",
+      "product": "Passion Fruit LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Signature",
+      "product": "Mango Coolatta MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 405000,
+      "price_usd": 4.52
+    },
+    {
+      "category": "Signature",
+      "product": "Mango Coolatta LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 495000,
+      "price_usd": 5.52
+    },
+    {
+      "category": "Signature",
+      "product": "Strawberry Coolatta MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 405000,
+      "price_usd": 4.52
+    },
+    {
+      "category": "Signature",
+      "product": "Strawberry Coolatta LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 495000,
+      "price_usd": 5.52
+    },
+    {
+      "category": "Signature",
+      "product": "Mango Strawberry Coolatta MEDIUM",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 405000,
+      "price_usd": 4.52
+    },
+    {
+      "category": "Signature",
+      "product": "Mango Strawberry Coolatta LARGE",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 495000,
+      "price_usd": 5.52
+    },
+    {
+      "category": "Signature",
+      "product": "Herb Tonic",
+      "brand": "Joe & the Juice",
+      "price_lbp": 886050,
+      "price_usd": 9.89
+    },
+    {
+      "category": "Signature",
+      "product": "Joe's Green Mile",
+      "brand": "Joe & the Juice",
+      "price_lbp": 886050,
+      "price_usd": 9.89
+    },
+    {
+      "category": "Signature",
+      "product": "Green Shield",
+      "brand": "Joe & the Juice",
+      "price_lbp": 886050,
+      "price_usd": 9.89
+    },
+    {
+      "category": "Signature",
+      "product": "Feel Good",
+      "brand": "Joe & the Juice",
+      "price_lbp": 886050,
+      "price_usd": 9.89
+    },
+    {
+      "category": "Signature",
+      "product": "Joe's Identity LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 886050,
+      "price_usd": 9.89
+    },
+    {
+      "category": "Signature",
+      "product": "Go Away Doc MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Signature",
+      "product": "Go Away Doc LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Signature",
+      "product": "Sports Juice MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Signature",
+      "product": "Sports Juice LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Signature",
+      "product": "Green Haven MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Signature",
+      "product": "Green Haven LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Signature",
+      "product": "Stress Down MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Signature",
+      "product": "Stress Down LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Signature",
+      "product": "Hell Of A Nerve MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Signature",
+      "product": "Hell Of A Nerve LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Signature",
+      "product": "Prince Of Green MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Signature",
+      "product": "Prince Of Green LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Signature",
+      "product": "Green Tonic MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Signature",
+      "product": "Green Tonic LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Signature",
+      "product": "Pick Me Up MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Signature",
+      "product": "Pick Me Up LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Signature",
+      "product": "Iron Man MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Signature",
+      "product": "Iron Man LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Water",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Water",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 63000,
+      "price_usd": 0.7
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Sparkling Water",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 135000,
+      "price_usd": 1.51
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Rim Sparkling Water 250 ml",
+      "brand": "Stories",
+      "price_lbp": 120000,
+      "price_usd": 1.34
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "San Benedetto Lemon 330 ml",
+      "brand": "Stories",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "San Benedetto Clementine 330 ml",
+      "brand": "Stories",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "San Benedetto Glass 250 ml",
+      "brand": "Stories",
+      "price_lbp": 230000,
+      "price_usd": 2.57
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Rim Water",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Orange Juice SMALL",
+      "brand": "Starbucks",
+      "price_lbp": 430000,
+      "price_usd": 4.8
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Orange Juice MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Orange Juice LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Orange Juice LARGE",
+      "brand": "Starbucks",
+      "price_lbp": 530000,
+      "price_usd": 5.92
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Juice (Maccaw)",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 135000,
+      "price_usd": 1.51
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Balkis Juice (Orange, Mawardi, Lemon, Apple, Pomegranate)",
+      "brand": "Stories",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Fresh Juice (Orange, Apple)",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 360000,
+      "price_usd": 4.02
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Fresh Juice (Pomegranate)",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 585000,
+      "price_usd": 6.53
+    },
+    {
+      "category": "Soft Drinks & Juices",
+      "product": "Soft Drinks",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 135000,
+      "price_usd": 1.51
+    },
+    {
+      "category": "Retail Coffee Beans",
+      "product": "American Coffee (250g)",
+      "brand": "Stories",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Retail Coffee Beans",
+      "product": "House Blend (250g)",
+      "brand": "Stories",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Retail Coffee Beans",
+      "product": "Yirgacheffe (250g)",
+      "brand": "Stories",
+      "price_lbp": 1000000,
+      "price_usd": 11.16
+    },
+    {
+      "category": "Milkshakes",
+      "product": "Vanilla Milkshake LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Milkshakes",
+      "product": "Chocolate Milkshake LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Milkshakes",
+      "product": "Strawberry Milkshake LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Protein Shakes",
+      "product": "Beets & Berries",
+      "brand": "Joe & the Juice",
+      "price_lbp": 886050,
+      "price_usd": 9.89
+    },
+    {
+      "category": "Protein Shakes",
+      "product": "Chocolate Flex",
+      "brand": "Joe & the Juice",
+      "price_lbp": 886050,
+      "price_usd": 9.89
+    },
+    {
+      "category": "Protein Shakes",
+      "product": "Big Matcha Energy",
+      "brand": "Joe & the Juice",
+      "price_lbp": 886050,
+      "price_usd": 9.89
+    },
+    {
+      "category": "Protein Shakes",
+      "product": "Unicorn Tears",
+      "brand": "Joe & the Juice",
+      "price_lbp": 886050,
+      "price_usd": 9.89
+    },
+    {
+      "category": "Protein Shakes",
+      "product": "Peanutter",
+      "brand": "Joe & the Juice",
+      "price_lbp": 886050,
+      "price_usd": 9.89
+    },
+    {
+      "category": "Shakes",
+      "product": "Power Shake MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617750,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Shakes",
+      "product": "Power Shake LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Shakes",
+      "product": "Coffee Shake MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Shakes",
+      "product": "Coffee Shake LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Shakes",
+      "product": "Avo Shake MEDIUM",
+      "brand": "Joe & the Juice",
+      "price_lbp": 617550,
+      "price_usd": 6.89
+    },
+    {
+      "category": "Shakes",
+      "product": "Avo Shake LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 760750,
+      "price_usd": 8.49
+    },
+    {
+      "category": "Shakes",
+      "product": "Pitaya Shake MEDIUM",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Shakes",
+      "product": "Pitaya Shake LARGE",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Shakes",
+      "product": "Blueberry Shake",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Shots",
+      "product": "Ginger Shot",
+      "brand": "Joe & the Juice",
+      "price_lbp": 286400,
+      "price_usd": 3.2
+    },
+    {
+      "category": "Shots",
+      "product": "Turmeric Shot",
+      "brand": "Joe & the Juice",
+      "price_lbp": 286400,
+      "price_usd": 3.2
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Syrup",
+      "brand": "Espresso Lab",
+      "price_lbp": 135000,
+      "price_usd": 1.51
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Syrup",
+      "brand": "Starbucks",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Extra Shot",
+      "brand": "Stories",
+      "price_lbp": 75000,
+      "price_usd": 0.84
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Extra Shot",
+      "brand": "Espresso Lab",
+      "price_lbp": 135000,
+      "price_usd": 1.51
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Extra Shot",
+      "brand": "Joe & the Juice",
+      "price_lbp": 107400,
+      "price_usd": 1.2
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Extra Shot",
+      "brand": "Starbucks",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Coconut Milk SMALL",
+      "brand": "Stories",
+      "price_lbp": 150000,
+      "price_usd": 1.67
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Coconut Milk SMALL",
+      "brand": "Joe & the Juice",
+      "price_lbp": 107400,
+      "price_usd": 1.2
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Coconut Milk MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 200000,
+      "price_usd": 2.23
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Coconut Milk LARGE",
+      "brand": "Stories",
+      "price_lbp": 250000,
+      "price_usd": 2.79
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Almond Milk SMALL",
+      "brand": "Stories",
+      "price_lbp": 150000,
+      "price_usd": 1.67
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Almond Milk MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 200000,
+      "price_usd": 2.23
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Almond Milk LARGE",
+      "brand": "Stories",
+      "price_lbp": 250000,
+      "price_usd": 2.79
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Almond Milk LARGE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 107400,
+      "price_usd": 1.2
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Oat Milk SMALL",
+      "brand": "Stories",
+      "price_lbp": 150000,
+      "price_usd": 1.67
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Oat Milk SMALL",
+      "brand": "Joe & the Juice",
+      "price_lbp": 107400,
+      "price_usd": 1.2
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Oat Milk MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 200000,
+      "price_usd": 2.23
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Oat Milk LARGE",
+      "brand": "Stories",
+      "price_lbp": 250000,
+      "price_usd": 2.79
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Soy Milk",
+      "brand": "Joe & the Juice",
+      "price_lbp": 107400,
+      "price_usd": 1.2
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Caramel",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Caramel Sugar Free",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Vanilla",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Vanilla",
+      "brand": "Joe & the Juice",
+      "price_lbp": 107400,
+      "price_usd": 1.2
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Vanilla",
+      "brand": "Starbucks",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Vanilla Sugar Free",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Salted caramel",
+      "brand": "Joe & the Juice",
+      "price_lbp": 107400,
+      "price_usd": 1.2
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Hazelnut",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "White Mocha",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Mocha",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Whipped Cream",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Whipped Cream",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 90000,
+      "price_usd": 1.0
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Whipped Cream",
+      "brand": "Starbucks",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Caramel Drizzle",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Chocolate Drizzle",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Chocolate Chips",
+      "brand": "Stories",
+      "price_lbp": 50000,
+      "price_usd": 0.56
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Flavor",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 45000,
+      "price_usd": 0.5
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Turbo",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 90000,
+      "price_usd": 1.0
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Ginger",
+      "brand": "Joe & the Juice",
+      "price_lbp": 80550,
+      "price_usd": 0.9
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Turmeric",
+      "brand": "Joe & the Juice",
+      "price_lbp": 80550,
+      "price_usd": 0.9
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Bresaola",
+      "brand": "Espresso Lab",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Rocca",
+      "brand": "Espresso Lab",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Mayo Basil Sauce",
+      "brand": "Espresso Lab",
+      "price_lbp": 200000,
+      "price_usd": 2.23
+    },
+    {
+      "category": "Add - Ons",
+      "product": "Mustard Lemon",
+      "brand": "Espresso Lab",
+      "price_lbp": 200000,
+      "price_usd": 2.23
+    },
+    {
+      "category": "Croissants",
+      "product": "CHEESE CROISSANT",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Croissants",
+      "product": "CHEESE CROISSANT",
+      "brand": "Espresso Lab",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Croissants",
+      "product": "CHEESE CROISSANT",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Croissants",
+      "product": "PLAIN CROISSANT",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Croissants",
+      "product": "PLAIN CROISSANT",
+      "brand": "Espresso Lab",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Croissants",
+      "product": "ALMOND CROISSANT",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Croissants",
+      "product": "ALMOND CROISSANT",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Croissants",
+      "product": "THYME CROISSANT",
+      "brand": "Stories",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Croissants",
+      "product": "THYME CROISSANT",
+      "brand": "Espresso Lab",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Croissants",
+      "product": "CHOCOLATE CROISSANT/ PAIN AU CHOCOLAT",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Croissants",
+      "product": "CHOCOLATE CROISSANT/ PAIN AU CHOCOLAT",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Croissants",
+      "product": "CHOCOLATE CROISSANT/ PAIN AU CHOCOLAT",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Croissants",
+      "product": "HALLOUMI CROISSANT",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Croissants",
+      "product": "TURKEY CROISSANT",
+      "brand": "Espresso Lab",
+      "price_lbp": 900000,
+      "price_usd": 10.04
+    },
+    {
+      "category": "Croissants",
+      "product": "TURKEY & CHEESE CROISSANT",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Croissants",
+      "product": "SPINACH FETA PRETZEL PIE",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Croissants",
+      "product": "TURKEY & CHEESE PRETZEL SUPREME",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Pastries",
+      "product": "LAZY CAKE",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Pastries",
+      "product": "LAZY CAKE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 492000,
+      "price_usd": 5.49
+    },
+    {
+      "category": "Pastries",
+      "product": "LAZY CAKE",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Pastries",
+      "product": "CARROT CAKE",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "CARROT CAKE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 492000,
+      "price_usd": 5.49
+    },
+    {
+      "category": "Pastries",
+      "product": "CARROT CAKE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Pastries",
+      "product": "VANILLA MUFFIN",
+      "brand": "Stories",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Pastries",
+      "product": "BLUEBERRY MUFFIN",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Pastries",
+      "product": "BLUEBERRY MUFFIN",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Pastries",
+      "product": "DOUBLE CHOCOLATE MUFFIN",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Pastries",
+      "product": "DOUBLE CHOCOLATE MUFFIN",
+      "brand": "Joe & the Juice",
+      "price_lbp": 492000,
+      "price_usd": 5.49
+    },
+    {
+      "category": "Pastries",
+      "product": "DOUBLE CHOCOLATE MUFFIN",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Pastries",
+      "product": "CHOCOLATE MUFFIN",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Pastries",
+      "product": "CHOCOLATE MUFFIN",
+      "brand": "Joe & the Juice",
+      "price_lbp": 492000,
+      "price_usd": 5.49
+    },
+    {
+      "category": "Pastries",
+      "product": "BROWNIES CAKE",
+      "brand": "Stories",
+      "price_lbp": 250000,
+      "price_usd": 2.79
+    },
+    {
+      "category": "Pastries",
+      "product": "BROWNIES CAKE",
+      "brand": "Joe & the Juice",
+      "price_lbp": 492000,
+      "price_usd": 5.49
+    },
+    {
+      "category": "Pastries",
+      "product": "ORANGE CAKE",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "ORANGE CAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Pastries",
+      "product": "CHOCOLATE ÉCLAIR",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Pastries",
+      "product": "CHOCOLATE ÉCLAIR",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "APRICOT SABLE",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Pastries",
+      "product": "CHOCOLATE SABLE",
+      "brand": "Stories",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Pastries",
+      "product": "BOSTON CREAM DONUT",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 225000,
+      "price_usd": 2.51
+    },
+    {
+      "category": "Pastries",
+      "product": "STRAWBERRY DOUGHNUTS",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 225000,
+      "price_usd": 2.51
+    },
+    {
+      "category": "Pastries",
+      "product": "BLUEBERRY CHEESECAKE",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Pastries",
+      "product": "BLUEBERRY CHEESECAKE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Pastries",
+      "product": "FRAMBOISE CHEESECAKE",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Pastries",
+      "product": "LOTUS CHEESECAKE",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Pastries",
+      "product": "LOTUS CHEESECAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Pastries",
+      "product": "LEMON CAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Pastries",
+      "product": "LEMON CAKE",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Pastries",
+      "product": "MARBLE CAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Pastries",
+      "product": "STRAWBERRY PUFF",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "BLACKOUT CHOCOLATE CAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "COFFEE BEANS CAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "SAN SEBASTIAN CHEESECAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Pastries",
+      "product": "STRAWBERRY CHEESECAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Pastries",
+      "product": "STRAWBERRY TARTE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Pastries",
+      "product": "MOSAIC CAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "WHITE CHOCOLATE BROWNIE",
+      "brand": "Espresso Lab",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Pastries",
+      "product": "PROFITEROL CUP",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Pastries",
+      "product": "BERRIES SHORTCAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Pastries",
+      "product": "FLOURLESS CHOCOLATE CAKE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Pastries",
+      "product": "LEMON TARTE",
+      "brand": "Espresso Lab",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Pastries",
+      "product": "STRAWBERRY CUP",
+      "brand": "Espresso Lab",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Pastries",
+      "product": "TIRAMISU",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Pastries",
+      "product": "RASPBERRY TARTE",
+      "brand": "Espresso Lab",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Pastries",
+      "product": "PECAN TARTE",
+      "brand": "Espresso Lab",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Pastries",
+      "product": "OATMEAL COOKIE",
+      "brand": "Espresso Lab",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Pastries",
+      "product": "LEVAIN COOKIE",
+      "brand": "Espresso Lab",
+      "price_lbp": 300000,
+      "price_usd": 3.35
+    },
+    {
+      "category": "Pastries",
+      "product": "CHOCOLATE BOMB",
+      "brand": "Espresso Lab",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Pastries",
+      "product": "SALTED CARAMEL COOKIE",
+      "brand": "Espresso Lab",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Pastries",
+      "product": "RED VELVET WHITE COOKIE",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "CHOCOLATE ÉCLAIR",
+      "brand": "Espresso Lab",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Pastries",
+      "product": "COFFEE ÉCLAIR",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "STRAWBERRY ÉCLAIR",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "GIANDUJA ÉCLAIR",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Pastries",
+      "product": "DOUBLE CHOCOLATE ÉCLAIR",
+      "brand": "Espresso Lab",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Pastries",
+      "product": "CHOCOLATE CAKE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Pastries",
+      "product": "MARBLE LOAF CAKE",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Pastries",
+      "product": "SUGAR FREE CARROT CAKE",
+      "brand": "Starbucks",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Pastries",
+      "product": "MILK CHOCOLATE CHUNK COOKIE",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Pastries",
+      "product": "TRIPLE CHOCOLATE CHIP COOKIE",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Pastries",
+      "product": "OATMEAL SCONE",
+      "brand": "Starbucks",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Pastries",
+      "product": "PISTACHIO COOKIE",
+      "brand": "Starbucks",
+      "price_lbp": 400000,
+      "price_usd": 4.46
+    },
+    {
+      "category": "Salads",
+      "product": "TUNA PASTA SALAD (GRAB&GO)",
+      "brand": "Stories",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Salads",
+      "product": "TUNA PASTA SALAD (GRAB&GO)",
+      "brand": "Espresso Lab",
+      "price_lbp": 950000,
+      "price_usd": 10.6
+    },
+    {
+      "category": "Salads",
+      "product": "TUNA PASTA SALAD (GRAB&GO)",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 810000,
+      "price_usd": 9.04
+    },
+    {
+      "category": "Salads",
+      "product": "TUNA SALAD (GRAB&GO)",
+      "brand": "Starbucks",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Salads",
+      "product": "ASIAN SALAD (GRAB&GO)",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Salads",
+      "product": "CAESAR SALAD (GRAB&GO)",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Salads",
+      "product": "CHICKEN CAESAR SALAD (GRAB&GO)",
+      "brand": "Stories",
+      "price_lbp": 900000,
+      "price_usd": 10.04
+    },
+    {
+      "category": "Salads",
+      "product": "CHICKEN CAESAR SALAD (GRAB&GO)",
+      "brand": "Starbucks",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Salads",
+      "product": "CHICKEN VERDE SALAD (GRAB&GO)",
+      "brand": "Stories",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Salads",
+      "product": "MEXICAN FEISTA SALAD (GRAB&GO)",
+      "brand": "Stories",
+      "price_lbp": 900000,
+      "price_usd": 10.04
+    },
+    {
+      "category": "Salads",
+      "product": "PASTA PESTO SALAD (GRAB&GO)",
+      "brand": "Stories",
+      "price_lbp": 900000,
+      "price_usd": 10.04
+    },
+    {
+      "category": "Salads",
+      "product": "QUINOA SALAD (GRAB&GO)",
+      "brand": "Stories",
+      "price_lbp": 770000,
+      "price_usd": 8.59
+    },
+    {
+      "category": "Salads",
+      "product": "SALAD BAR (1 VISIT)",
+      "brand": "Stories",
+      "price_lbp": 1200000,
+      "price_usd": 13.39
+    },
+    {
+      "category": "Salads",
+      "product": "CHEF SALAD",
+      "brand": "Espresso Lab",
+      "price_lbp": 950000,
+      "price_usd": 10.6
+    },
+    {
+      "category": "Sandwiches",
+      "product": "TURKEY & CHEESE SUB",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Sandwiches",
+      "product": "TURKEY & CHEESE SUB",
+      "brand": "Espresso Lab",
+      "price_lbp": 900000,
+      "price_usd": 10.04
+    },
+    {
+      "category": "Sandwiches",
+      "product": "TURKEY & CHEESE SUB",
+      "brand": "Joe & the Juice",
+      "price_lbp": 1074000,
+      "price_usd": 11.99
+    },
+    {
+      "category": "Sandwiches",
+      "product": "TURKEY & CHEESE SUB",
+      "brand": "Starbucks",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Sandwiches",
+      "product": "CHICKEN CAESAR SUB",
+      "brand": "Stories",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Sandwiches",
+      "product": "CHICKEN CAESAR SUB",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 900000,
+      "price_usd": 10.04
+    },
+    {
+      "category": "Sandwiches",
+      "product": "CHICKEN TERIAKI SUB",
+      "brand": "Stories",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Sandwiches",
+      "product": "ASIAN CRAB SUB",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Sandwiches",
+      "product": "ASIAN CRAB SUB",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 900000,
+      "price_usd": 10.04
+    },
+    {
+      "category": "Sandwiches",
+      "product": "ARABIAN HALLOUMI",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Sandwiches",
+      "product": "PESTO HALLOUMI SUB",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Sandwiches",
+      "product": "PESTO HALLOUMI SUB",
+      "brand": "Dunkin Donuts",
+      "price_lbp": 900000,
+      "price_usd": 10.04
+    },
+    {
+      "category": "Sandwiches",
+      "product": "PESTO HALLOUMI SUB",
+      "brand": "Joe & the Juice",
+      "price_lbp": 985000,
+      "price_usd": 10.99
+    },
+    {
+      "category": "Sandwiches",
+      "product": "TUNA SUB",
+      "brand": "Stories",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Sandwiches",
+      "product": "TUNA SUB",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Sandwiches",
+      "product": "TUNA SUB",
+      "brand": "Joe & the Juice",
+      "price_lbp": 1074000,
+      "price_usd": 11.99
+    },
+    {
+      "category": "Sandwiches",
+      "product": "LABNEH SUB",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Sandwiches",
+      "product": "LABNEH SUB",
+      "brand": "Joe & the Juice",
+      "price_lbp": 985000,
+      "price_usd": 10.99
+    },
+    {
+      "category": "Sandwiches",
+      "product": "FILET STEAK SUB",
+      "brand": "Stories",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Sandwiches",
+      "product": "FILET STEAK SUB",
+      "brand": "Joe & the Juice",
+      "price_lbp": 1334000,
+      "price_usd": 14.89
+    },
+    {
+      "category": "Sandwiches",
+      "product": "FOCACCIA",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Sandwiches",
+      "product": "ESLAB BAGUETTE",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Sandwiches",
+      "product": "ACMA CHEESE",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Sandwiches",
+      "product": "SIMIT",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Sandwiches",
+      "product": "SMOKED TURKEY",
+      "brand": "Espresso Lab",
+      "price_lbp": 900000,
+      "price_usd": 10.04
+    },
+    {
+      "category": "Sandwiches",
+      "product": "BRESAOLA SOURDOUGH",
+      "brand": "Espresso Lab",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Sandwiches",
+      "product": "TURKEY & CHEESE BROWN LOAF",
+      "brand": "Starbucks",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Sandwiches",
+      "product": "TURKEY CRANBERRY",
+      "brand": "Espresso Lab",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Sandwiches",
+      "product": "CHICKEN MOZARELLA & PESTO",
+      "brand": "Starbucks",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Sandwiches",
+      "product": "MIXED CHEESE",
+      "brand": "Starbucks",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Sandwiches",
+      "product": "AVOCADO TOAST",
+      "brand": "Espresso Lab",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Sandwiches",
+      "product": "SALMON CREAM CHEESE HERB TOAST",
+      "brand": "Espresso Lab",
+      "price_lbp": 1100000,
+      "price_usd": 12.28
+    },
+    {
+      "category": "Sandwiches",
+      "product": "MOUHAMARA",
+      "brand": "Espresso Lab",
+      "price_lbp": 950000,
+      "price_usd": 10.6
+    },
+    {
+      "category": "Sandwiches",
+      "product": "SIMIT PLAIN",
+      "brand": "Espresso Lab",
+      "price_lbp": 200000,
+      "price_usd": 2.23
+    },
+    {
+      "category": "Sandwiches",
+      "product": "SIMIT DOUBLE CHEESE",
+      "brand": "Espresso Lab",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Sandwiches",
+      "product": "SIMIT CREAM CHEESE",
+      "brand": "Espresso Lab",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Original Yogurt Combo SMALL",
+      "brand": "Stories",
+      "price_lbp": 590000,
+      "price_usd": 6.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Original Yogurt Combo MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Original Yogurt Combo LARGE",
+      "brand": "Stories",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Original Yogurt SMALL",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Original Yogurt  MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Original Yogurt LARGE",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Blueberry Yogurt Combo SMALL",
+      "brand": "Stories",
+      "price_lbp": 590000,
+      "price_usd": 6.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Blueberry Yogurt Combo MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Blueberry Yogurt Combo LARGE",
+      "brand": "Stories",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Blueberry Yogurt SMALL",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Blueberry Yogurt MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Blueberry Yogurt LARGE",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Chocolate Yogurt Combo SMALL",
+      "brand": "Stories",
+      "price_lbp": 590000,
+      "price_usd": 6.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Chocolate Yogurt Combo MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Chocolate Yogurt Combo LARGE",
+      "brand": "Stories",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Chocolate Yogurt SMALL",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Chocolate Yogurt  MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Chocolate Yogurt LARGE",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Spread Yogurt Combo SMALL",
+      "brand": "Stories",
+      "price_lbp": 590000,
+      "price_usd": 6.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Spread Yogurt Combo MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Spread Yogurt Combo LARGE",
+      "brand": "Stories",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Spread Yogurt SMALL",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Spread Yogurt MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Spread Yogurt LARGE",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Yogurt Combo SMALL",
+      "brand": "Stories",
+      "price_lbp": 590000,
+      "price_usd": 6.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Yogurt Combo MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Yogurt Combo LARGE",
+      "brand": "Stories",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Yogurt SMALL",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Yogurt MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Lotus Yogurt LARGE",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Mango Yogurt Combo SMALL",
+      "brand": "Stories",
+      "price_lbp": 590000,
+      "price_usd": 6.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Mango Yogurt Combo MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Mango Yogurt Combo LARGE",
+      "brand": "Stories",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Mango Yogurt SMALL",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Mango Yogurt MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Mango Yogurt LARGE",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Pomegranate Yogurt Combo SMALL",
+      "brand": "Stories",
+      "price_lbp": 590000,
+      "price_usd": 6.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Pomegranate Yogurt Combo MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Pomegranate Yogurt Combo LARGE",
+      "brand": "Stories",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Pomegranate Yogurt SMALL",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Pomegranate Yogurt MEDIUM",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Frozen Yogurt",
+      "product": "Pomegranate Yogurt LARGE",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Toppings",
+      "product": "Blueberries",
+      "brand": "Stories",
+      "price_lbp": 120000,
+      "price_usd": 1.34
+    },
+    {
+      "category": "Toppings",
+      "product": "Brownies",
+      "brand": "Stories",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Toppings",
+      "product": "Chocolate Chips",
+      "brand": "Stories",
+      "price_lbp": 120000,
+      "price_usd": 1.34
+    },
+    {
+      "category": "Toppings",
+      "product": "Granolla",
+      "brand": "Stories",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Toppings",
+      "product": "Gummy Bears",
+      "brand": "Stories",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Toppings",
+      "product": "Honey",
+      "brand": "Stories",
+      "price_lbp": 120000,
+      "price_usd": 1.34
+    },
+    {
+      "category": "Toppings",
+      "product": "Lotus Biscuits",
+      "brand": "Stories",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Toppings",
+      "product": "Mango",
+      "brand": "Stories",
+      "price_lbp": 120000,
+      "price_usd": 1.34
+    },
+    {
+      "category": "Toppings",
+      "product": "Marshmallow",
+      "brand": "Stories",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Toppings",
+      "product": "Mixed Nuts",
+      "brand": "Stories",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Toppings",
+      "product": "Oats",
+      "brand": "Stories",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Toppings",
+      "product": "Oreo",
+      "brand": "Stories",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Toppings",
+      "product": "Pineapple",
+      "brand": "Stories",
+      "price_lbp": 120000,
+      "price_usd": 1.34
+    },
+    {
+      "category": "Toppings",
+      "product": "Sprinkles",
+      "brand": "Stories",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Toppings",
+      "product": "Strawberry",
+      "brand": "Stories",
+      "price_lbp": 120000,
+      "price_usd": 1.34
+    },
+    {
+      "category": "Toppings",
+      "product": "Wafer Roll",
+      "brand": "Stories",
+      "price_lbp": 100000,
+      "price_usd": 1.12
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Chocolate Crunch",
+      "brand": "Stories",
+      "price_lbp": 170000,
+      "price_usd": 1.9
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Chocolate Quella",
+      "brand": "Stories",
+      "price_lbp": 170000,
+      "price_usd": 1.9
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Chocolate Quella Crunch",
+      "brand": "Stories",
+      "price_lbp": 170000,
+      "price_usd": 1.9
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Crumble Lemon",
+      "brand": "Stories",
+      "price_lbp": 170000,
+      "price_usd": 1.9
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Crumble Pistachio",
+      "brand": "Stories",
+      "price_lbp": 170000,
+      "price_usd": 1.9
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Crumble Red Berries",
+      "brand": "Stories",
+      "price_lbp": 170000,
+      "price_usd": 1.9
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Nutella",
+      "brand": "Stories",
+      "price_lbp": 150000,
+      "price_usd": 1.67
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Pistachio Crunch",
+      "brand": "Stories",
+      "price_lbp": 170000,
+      "price_usd": 1.9
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Quella Pistachio",
+      "brand": "Stories",
+      "price_lbp": 170000,
+      "price_usd": 1.9
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Variegato Wafer",
+      "brand": "Stories",
+      "price_lbp": 150000,
+      "price_usd": 1.67
+    },
+    {
+      "category": "Luxury Toppings",
+      "product": "Variegato Wafer Pistachio",
+      "brand": "Stories",
+      "price_lbp": 170000,
+      "price_usd": 1.9
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "B.B.Q Chicken",
+      "brand": "Stories",
+      "price_lbp": 1050000,
+      "price_usd": 11.72
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Butter Chicken",
+      "brand": "Stories",
+      "price_lbp": 1050000,
+      "price_usd": 11.72
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Chicken Alfredo Pasta",
+      "brand": "Stories",
+      "price_lbp": 1165500,
+      "price_usd": 13.01
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Chicken Stroganoff",
+      "brand": "Stories",
+      "price_lbp": 1165500,
+      "price_usd": 13.01
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Freekeh With Chicken",
+      "brand": "Stories",
+      "price_lbp": 1650500,
+      "price_usd": 18.42
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Kibbeh B Laban",
+      "brand": "Stories",
+      "price_lbp": 1650500,
+      "price_usd": 18.42
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Lasagna",
+      "brand": "Stories",
+      "price_lbp": 1650500,
+      "price_usd": 18.42
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Oriental Rice",
+      "brand": "Stories",
+      "price_lbp": 1650500,
+      "price_usd": 18.42
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Potato Souffle",
+      "brand": "Stories",
+      "price_lbp": 1050000,
+      "price_usd": 11.72
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Roasted Chicken",
+      "brand": "Stories",
+      "price_lbp": 1050000,
+      "price_usd": 11.72
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Shish Barak",
+      "brand": "Stories",
+      "price_lbp": 1650500,
+      "price_usd": 18.42
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Spaghetti Bolognese",
+      "brand": "Stories",
+      "price_lbp": 1650500,
+      "price_usd": 18.42
+    },
+    {
+      "category": "Plat Du Jour",
+      "product": "Vegetarian Grape Leaves",
+      "brand": "Stories",
+      "price_lbp": 1650500,
+      "price_usd": 18.42
+    },
+    {
+      "category": "Pizza",
+      "product": "Margherita",
+      "brand": "Stories",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Pizza",
+      "product": "Margherita",
+      "brand": "Espresso Lab",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Pizza",
+      "product": "Pepperoni",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Pizza",
+      "product": "Pepperoni",
+      "brand": "Espresso Lab",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Pizza",
+      "product": "Classic",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Pizza",
+      "product": "Chicken Pesto",
+      "brand": "Stories",
+      "price_lbp": 850000,
+      "price_usd": 9.49
+    },
+    {
+      "category": "Pizza",
+      "product": "Goat Cheese",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Wraps",
+      "product": "Bulgari Mix",
+      "brand": "Stories",
+      "price_lbp": 800000,
+      "price_usd": 8.93
+    },
+    {
+      "category": "Wraps",
+      "product": "Chicken Caesar",
+      "brand": "Stories",
+      "price_lbp": 900000,
+      "price_usd": 10.04
+    },
+    {
+      "category": "Wraps",
+      "product": "Pesto Halloumi",
+      "brand": "Stories",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Wraps",
+      "product": "Smoked Turkey",
+      "brand": "Stories",
+      "price_lbp": 700000,
+      "price_usd": 7.81
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Nut Blend",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Sesam Blend",
+      "brand": "Stories",
+      "price_lbp": 500000,
+      "price_usd": 5.58
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Cococnut Date Ball",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Pistachio Date Ball",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Gluten Free",
+      "product": "White Truffle Choco Ball",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Cacao Truffle Choco Ball",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Choco Croissant",
+      "brand": "Stories",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Cheese Croissant",
+      "brand": "Stories",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Thyme Croissant",
+      "brand": "Stories",
+      "price_lbp": 600000,
+      "price_usd": 6.7
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Almond Croissant",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Red Berries Cheesecake",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Mango Minted Cheesecake",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Pistachio Cheesecake",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Pistachio  Cake",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Fruit Cake",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Red Velvet",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Tiramisu",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Duo Chocolate",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Tarte aux Fraise",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Coconut Cake",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Almond Apple Cake",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Coffee Cake",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Lemon Cake",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Carrot Cake",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Red Marble Cake",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Cake Pops Chocolate",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Cake Pops Mango",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Cake Pops White Chocolate",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Cake Pops Strawberry",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Praline Kiss Cookie",
+      "brand": "Stories",
+      "price_lbp": 650000,
+      "price_usd": 7.25
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Crème Brulee Donut",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Choco Date Box",
+      "brand": "Stories",
+      "price_lbp": 950000,
+      "price_usd": 10.6
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Chocolate Éclair",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Vanilla Éclair",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Salted Caramel Éclair",
+      "brand": "Stories",
+      "price_lbp": 750000,
+      "price_usd": 8.37
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Mixed Petit Four Vanilla & Chocolate",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Mixed Long Biscuits",
+      "brand": "Stories",
+      "price_lbp": 350000,
+      "price_usd": 3.91
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Mixed Round Biscuits",
+      "brand": "Stories",
+      "price_lbp": 450000,
+      "price_usd": 5.02
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Flat Croissant Chocolate",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    },
+    {
+      "category": "Gluten Free",
+      "product": "Flat Croissant White Chocolate",
+      "brand": "Stories",
+      "price_lbp": 550000,
+      "price_usd": 6.14
+    }
+  ]
+}
