@@ -474,6 +474,7 @@ function buildReport(): PricingReport {
       competitors: ["Espresso Lab"],
     },
     products: [{}, {}, {}] as PricingReport["products"],
+    data_quality_warnings: [],
     categories: [
       { category: "Hot", product_count: 2, countable_product_count: 2, avg_price_index: 120 },
       { category: "Cold", product_count: 1, countable_product_count: 1, avg_price_index: 80 },
