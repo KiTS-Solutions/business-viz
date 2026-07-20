@@ -1,0 +1,76 @@
+name: Deploy dashboard to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Regenerate processed data
+        env:
+          PYTHONPATH: scripts
+        run: |
+          python -m pricing_pipeline.parse_pricing \
+            --xlsx "raw-data/Product Pricing Comparison March 2026 (1).xlsx" \
+            --config sources/stories-pricing-2026-03.json \
+            --out processed/stories-pricing-2026-03.normalized.json
+          python -m pricing_pipeline.analyze_pricing \
+            --in processed/stories-pricing-2026-03.normalized.json \
+            --out processed/stories-pricing-2026-03.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install web dependencies
+        working-directory: web
+        run: npm ci
+
+      - name: Run web test suite
+        working-directory: web
+        run: npm run test
+
+      - name: Build static export
+        working-directory: web
+        env:
+          GITHUB_PAGES: "true"
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
