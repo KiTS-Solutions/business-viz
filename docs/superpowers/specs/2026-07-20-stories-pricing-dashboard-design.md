@@ -15,9 +15,10 @@ This spec covers two things:
 
 ## 2. Source Data Summary
 
-- Single sheet, 617 rows, 591 product line items across 24 categories (Black Coffee, Brewed Coffee, Mixed Hot/Cold Beverages, Blended Drinks, Tea, Signature, Pastries, Sandwiches, Frozen Yogurt, Pizza, etc.)
+- Single sheet, 617 rows, 591 product line items across 25 categories (Black Coffee, Brewed Coffee, Mixed Hot/Cold Beverages, Blended Drinks, Tea, Signature, Pastries, Sandwiches, Frozen Yogurt, Pizza, etc.)
 - Columns: Stories (client) + 4 competitors, plus source-computed Average and Difference columns
 - Prices in LBP. Coverage is uneven: Stories priced on 52.5% of line items; competitors range 14.4%–29.3%.
+- After processing (dropping 7 line items with no price from any brand, and collapsing 1 duplicated product name with conflicting prices), the pipeline's analytics output covers 583 products across those 25 categories — see the pipeline plan's Definition of Done for the exact breakdown.
 - Category rows are visually distinguished (merged cells, fill color) as section headers in the source file.
 - **Methodology issue found in source file:** its "Average" column includes Stories' own price, which mechanically pulls the benchmark toward Stories and understates real pricing gaps (e.g. Americano Medium: source reports a −14,500 LBP gap vs. average; recomputed against competitors only, the true gap is −19,333 LBP, ~33% larger). This pipeline corrects for that (see §4).
 

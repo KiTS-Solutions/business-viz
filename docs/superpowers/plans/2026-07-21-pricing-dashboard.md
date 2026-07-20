@@ -10,7 +10,7 @@
 
 **Reference spec:** `docs/superpowers/specs/2026-07-20-stories-pricing-dashboard-design.md` — this plan implements spec §5-8 (dashboard UI, branding, deployment).
 
-**Depends on:** `docs/superpowers/plans/2026-07-20-pricing-data-pipeline.md` must be executed first. This plan's Task 2 test asserts against the real committed `processed/stories-pricing-2026-03.json` (591 products, 24 categories) — it will fail if that file doesn't exist yet.
+**Depends on:** `docs/superpowers/plans/2026-07-20-pricing-data-pipeline.md` must be executed first. This plan's Task 2 test asserts against the real committed `processed/stories-pricing-2026-03.json` (583 products, 25 categories — the raw sheet has 591 product lines across 25 categories, but 7 lines have no price from any brand and 1 product name is duplicated with conflicting prices across two rows, so the deduplicated analytics output is 583 products; see `data_quality_warnings` in the output for the duplicate) — it will fail if that file doesn't exist yet.
 
 ## Global Constraints
 
@@ -272,8 +272,8 @@ describe("loadReport", () => {
   it("loads the report with the shape produced by the Python pipeline", () => {
     const report = loadReport("stories-pricing-2026-03");
     expect(report.meta.client).toBe("Stories");
-    expect(report.products.length).toBe(591);
-    expect(report.categories.length).toBe(24);
+    expect(report.products.length).toBe(583);
+    expect(report.categories.length).toBe(25);
   });
 });
 ```
@@ -1413,7 +1413,7 @@ Expected: all tests across every task pass.
 npm run build
 npm run start
 ```
-Open `http://localhost:3000` and confirm: the Context Bar shows Stories/period/FX rate, the four KPI tiles render real numbers, the Category Positioning chart renders bars for all 24 categories, the presenter-mode toggle hides/shows Findings & Recommendations, and the Data Explorer search filters the full product list. Stop the server (`Ctrl+C`) once confirmed.
+Open `http://localhost:3000` and confirm: the Context Bar shows Stories/period/FX rate, the four KPI tiles render real numbers, the Category Positioning chart renders bars for all 25 categories, the presenter-mode toggle hides/shows Findings & Recommendations, and the Data Explorer search filters the full product list. Stop the server (`Ctrl+C`) once confirmed.
 
 - [ ] **Step 8: Commit**
 

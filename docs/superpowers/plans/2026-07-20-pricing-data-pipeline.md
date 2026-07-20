@@ -1021,7 +1021,7 @@ print('categories:', len(d['categories']))
 print('outliers:', sum(1 for p in d['products'] if p['is_outlier']))
 "
 ```
-Expected: `products: 591`, `categories: 24`, and some non-zero outlier count (exact count depends on real data distribution — sanity-check it's neither 0 nor implausibly close to 591).
+Expected: `products: 583`, `categories: 25`, and some non-zero outlier count (exact count depends on real data distribution — sanity-check it's neither 0 nor implausibly close to 583). Note: the raw sheet has 591 product lines across 25 categories, but 7 lines have no price from any brand (dropped entirely — nothing to analyze) and 1 product name ("CHOCOLATE ÉCLAIR" in Pastries) is duplicated across two rows with conflicting prices, collapsing to one entry — hence 583, not 591.
 
 - [ ] **Step 7: Commit**
 
@@ -1035,6 +1035,6 @@ git commit -m "feat: add analyze CLI, run full analytics against real Stories Ma
 ## Definition of Done
 
 - `pytest -v` from repo root passes with 0 failures.
-- `processed/stories-pricing-2026-03.json` exists, committed, containing 591 products across 24 categories with `price_index`, `comparability`, `tier`, and `is_outlier` populated per the corrected (competitor-only-average) methodology.
+- `processed/stories-pricing-2026-03.json` exists, committed, containing 583 products across 25 categories with `price_index`, `comparability`, `tier`, and `is_outlier` populated per the corrected (competitor-only-average) methodology, plus a `data_quality_warnings` array surfacing the one duplicate-row price conflict found in the source data.
 - `sources/stories-pricing-2026-03.json` exists and is the only client-specific file in the whole pipeline — `scripts/pricing_pipeline/` contains zero hardcoded brand/category names.
 - This analytics JSON is the data contract the dashboard plan consumes — its shape (`meta`, `products[]`, `categories[]`) must not change without updating the dashboard plan.

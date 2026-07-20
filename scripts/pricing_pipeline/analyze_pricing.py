@@ -1,3 +1,23 @@
+def find_duplicate_brand_conflicts(records: list) -> list:
+    """Detect (category, product, brand) combinations that appear more than once
+    in the records with different price_lbp values — these indicate duplicate rows
+    in the source data where group_records_by_product() would silently keep only
+    the last-seen price. Returns a list of warning dicts, empty if none found."""
+    seen = {}
+    warnings = []
+    for r in records:
+        key = (r["category"], r["product"], r["brand"])
+        if key in seen and seen[key] != r["price_lbp"]:
+            warnings.append({
+                "category": r["category"],
+                "product": r["product"],
+                "brand": r["brand"],
+                "conflicting_prices_lbp": [seen[key], r["price_lbp"]],
+            })
+        seen[key] = r["price_lbp"]
+    return warnings
+
+
 def group_records_by_product(records: list) -> dict:
     grouped = {}
     for r in records:
@@ -116,6 +136,7 @@ def flag_outliers(products: list, threshold: float = 15.0) -> None:
 import argparse
 import json
 import os
+import sys
 
 
 def run_analysis(normalized_json_path: str, output_path: str) -> dict:
@@ -130,8 +151,9 @@ def run_analysis(normalized_json_path: str, output_path: str) -> dict:
     assign_price_tiers(products)
     flag_outliers(products)
     categories = build_category_rollups(products)
+    data_quality_warnings = find_duplicate_brand_conflicts(normalized["records"])
 
-    result = {"meta": meta, "products": products, "categories": categories}
+    result = {"meta": meta, "products": products, "categories": categories, "data_quality_warnings": data_quality_warnings}
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
@@ -149,7 +171,13 @@ def _build_analysis_arg_parser():
 
 def main(argv=None):
     args = _build_analysis_arg_parser().parse_args(argv)
-    run_analysis(args.input_path, args.out)
+    result = run_analysis(args.input_path, args.out)
+    for w in result["data_quality_warnings"]:
+        print(
+            f"WARNING: duplicate row for {w['category']} / {w['product']} / {w['brand']} "
+            f"has conflicting prices {w['conflicting_prices_lbp']} — kept the last one.",
+            file=sys.stderr,
+        )
 
 
 if __name__ == "__main__":
