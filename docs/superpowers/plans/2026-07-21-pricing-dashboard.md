@@ -319,10 +319,18 @@ export interface ReportMeta {
   generated_from?: string;
 }
 
+export interface DataQualityWarning {
+  category: string;
+  product: string;
+  brand: string;
+  conflicting_prices_lbp: number[];
+}
+
 export interface PricingReport {
   meta: ReportMeta;
   products: ProductAnalytics[];
   categories: CategoryRollup[];
+  data_quality_warnings: DataQualityWarning[];
 }
 ```
 
