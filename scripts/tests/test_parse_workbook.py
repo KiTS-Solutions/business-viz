@@ -107,4 +107,42 @@ def test_parse_workbook_config_mismatch_raises_error(tmp_path):
         assert False, "Should have raised ValueError"
     except ValueError as e:
         assert "Unknown Brand" in str(e)
-        assert "do not contain expected brands from config" in str(e)
+        assert "do not match config's expected brands" in str(e)
+
+
+def test_parse_workbook_header_has_extra_brands_not_in_config(tmp_path):
+    """
+    Test that raises ValueError when header has MORE brands than config expects.
+    This reproduces the scenario where someone adds a 5th competitor to the
+    spreadsheet (e.g., "E") but forgets to update the config.
+    Before the fix, this would silently drop the extra column with no error.
+    """
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    # Header has 5 brands (Stories, A, B, C, D, E) + Average + Difference
+    ws.append(["Products Competitors", "Stories", "A", "B", "C", "D", "E", "Average", "Difference"])
+    ws.append(["Black Coffee", None, None, None, None, None, None, None, None])
+    ws.append(["Americano MEDIUM", 350000, 400000, 380000, 360000, 370000, 390000, 374333, 24333])
+    path = tmp_path / "sample_extra_brands.xlsx"
+    wb.save(path)
+
+    # Config expects only 4 competitors (A, B, C, D) — missing E
+    config = {
+        "client": "Stories",
+        "report_date": "2026-03-01",
+        "currency": "LBP",
+        "fx_usd_rate": 89600,
+        "fx_rate_date": "2026-07-20",
+        "fx_source": "test",
+        "own_brand": "Stories",
+        "competitors": ["A", "B", "C", "D"],  # Only 4, missing E
+    }
+
+    try:
+        parse_workbook(str(path), config)
+        assert False, "Should have raised ValueError when header has extra brands not in config"
+    except ValueError as e:
+        error_msg = str(e)
+        assert "do not match config's expected brands" in error_msg
+        assert "E" in error_msg
+        assert "Present in header but not in config" in error_msg
