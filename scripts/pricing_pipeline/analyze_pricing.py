@@ -62,3 +62,52 @@ def build_category_rollups(products: list) -> list:
             "avg_price_index": avg_index,
         })
     return rollups
+
+
+import statistics
+
+
+def assign_price_tiers(products: list) -> None:
+    by_category = {}
+    for p in products:
+        if p["own_price_lbp"] is not None:
+            by_category.setdefault(p["category"], []).append(p["own_price_lbp"])
+
+    bounds_by_category = {}
+    for category, prices in by_category.items():
+        if len(prices) < 4:
+            bounds_by_category[category] = None
+            continue
+        sorted_prices = sorted(prices)
+        q1, _, q3 = statistics.quantiles(sorted_prices, n=4)
+        bounds_by_category[category] = (q1, q3)
+
+    for p in products:
+        bounds = bounds_by_category.get(p["category"])
+        price = p["own_price_lbp"]
+        if bounds is None or price is None:
+            p["tier"] = None
+            continue
+        q1, q3 = bounds
+        if price <= q1:
+            p["tier"] = "Value"
+        elif price >= q3:
+            p["tier"] = "Premium"
+        else:
+            p["tier"] = "Core"
+
+
+def flag_outliers(products: list, threshold: float = 15.0) -> None:
+    for p in products:
+        index = p["price_index"]
+        if index is None or p["comparability"] == "low":
+            p["is_outlier"] = False
+            p["outlier_direction"] = None
+            continue
+        deviation = index - 100
+        if abs(deviation) >= threshold:
+            p["is_outlier"] = True
+            p["outlier_direction"] = "overpriced" if deviation > 0 else "underpriced"
+        else:
+            p["is_outlier"] = False
+            p["outlier_direction"] = None
