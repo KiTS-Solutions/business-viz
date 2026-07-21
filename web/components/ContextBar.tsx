@@ -1,5 +1,5 @@
 import type { ReportMeta } from "@/lib/data/types";
-import { formatReportPeriod } from "@/lib/format/date";
+import { formatReportPeriod, formatFullDate } from "@/lib/format/date";
 
 export function ContextBar({ meta }: { meta: ReportMeta }) {
   return (
@@ -8,7 +8,7 @@ export function ContextBar({ meta }: { meta: ReportMeta }) {
         <p className="text-xs leading-relaxed">
           Prepared for <strong className="text-white">{meta.client}</strong> — {formatReportPeriod(meta.report_date)} ·
           Currency: {meta.currency}, USD shown as equivalent · FX: {meta.fx_usd_rate.toLocaleString("en-US")} LBP/USD as
-          of {meta.fx_rate_date} (source: {meta.fx_source})
+          of {formatFullDate(meta.fx_rate_date)} (source: {meta.fx_source})
         </p>
       </div>
     </div>

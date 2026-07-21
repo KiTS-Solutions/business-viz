@@ -133,57 +133,58 @@ export function CategoryPriceMap({
         </div>
       </div>
 
-      <div
-        style={{ height: Math.max(180, visibleRows.length * 36 + 80) }}
-        className="w-full"
-        aria-label="Category Price Positioning Map"
-        data-testid="category-price-map"
-      >
-        <ResponsiveContainer width="100%" height="100%">
-          <ScatterChart margin={{ left: 140, right: 24, top: 16, bottom: 16 }}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis
-              type="number"
-              dataKey="avgPriceLbp"
-              tickFormatter={(v: number) => `${Math.round(v / 1000)}k`}
-            />
-            <YAxis
-              type="number"
-              dataKey="categoryIndex"
-              domain={[-0.5, Math.max(0, visibleRows.length - 1) + 0.5]}
-              tickFormatter={(v: number) => visibleRows[v]?.category ?? ""}
-              ticks={visibleRows.map((r) => categoryIndexOf(r.category, visibleRows))}
-              width={130}
-              interval={0}
-            />
-            <ZAxis range={[60, 60]} />
-            {rangeBands.map((band) => (
-              <ReferenceArea
-                key={band.category}
-                x1={band.x1}
-                x2={band.x2}
-                y1={band.y1}
-                y2={band.y2}
-                fill="#2f5b6b"
-                fillOpacity={0.08}
-                stroke="none"
-                ifOverflow="visible"
+      {/* Fixed 140px left margin for category labels gets crushed unreadable
+          below ~600px viewport width — Recharts doesn't reflow it. Give the
+          chart a real minimum width and let this wrapper scroll
+          horizontally, same pattern as the Data Explorer/heatmap tables. */}
+      <div className="overflow-x-auto" aria-label="Category Price Positioning Map" data-testid="category-price-map">
+        <div style={{ height: Math.max(180, visibleRows.length * 36 + 80), minWidth: 600 }} className="w-full">
+          <ResponsiveContainer width="100%" height="100%">
+            <ScatterChart margin={{ left: 140, right: 24, top: 16, bottom: 16 }}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis
+                type="number"
+                dataKey="avgPriceLbp"
+                tickFormatter={(v: number) => `${Math.round(v / 1000)}k`}
               />
-            ))}
-            <Tooltip content={<PointTooltip fxRate={fxRate} />} cursor={{ strokeDasharray: "3 3" }} />
-            <Scatter data={points} shape="circle">
-              {points.map((p, i) => (
-                <Cell
-                  key={`${p.category}-${p.brand}-${i}`}
-                  fill={p.isOwnBrand ? BRAND_COLORS.stories : CHART_COLORS[p.brand] ?? CONTEXT_COLOR}
-                  stroke={p.isOwnBrand ? "#1a1a1a" : "none"}
-                  strokeWidth={p.isOwnBrand ? 1.5 : 0}
-                  r={p.isOwnBrand ? 7 : 5}
+              <YAxis
+                type="number"
+                dataKey="categoryIndex"
+                domain={[-0.5, Math.max(0, visibleRows.length - 1) + 0.5]}
+                tickFormatter={(v: number) => visibleRows[v]?.category ?? ""}
+                ticks={visibleRows.map((r) => categoryIndexOf(r.category, visibleRows))}
+                width={130}
+                interval={0}
+              />
+              <ZAxis range={[60, 60]} />
+              {rangeBands.map((band) => (
+                <ReferenceArea
+                  key={band.category}
+                  x1={band.x1}
+                  x2={band.x2}
+                  y1={band.y1}
+                  y2={band.y2}
+                  fill="#2f5b6b"
+                  fillOpacity={0.08}
+                  stroke="none"
+                  ifOverflow="visible"
                 />
               ))}
-            </Scatter>
-          </ScatterChart>
-        </ResponsiveContainer>
+              <Tooltip content={<PointTooltip fxRate={fxRate} />} cursor={{ strokeDasharray: "3 3" }} />
+              <Scatter data={points} shape="circle">
+                {points.map((p, i) => (
+                  <Cell
+                    key={`${p.category}-${p.brand}-${i}`}
+                    fill={p.isOwnBrand ? BRAND_COLORS.stories : CHART_COLORS[p.brand] ?? CONTEXT_COLOR}
+                    stroke={p.isOwnBrand ? "#1a1a1a" : "none"}
+                    strokeWidth={p.isOwnBrand ? 1.5 : 0}
+                    r={p.isOwnBrand ? 7 : 5}
+                  />
+                ))}
+              </Scatter>
+            </ScatterChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
   );

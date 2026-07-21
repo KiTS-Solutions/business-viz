@@ -1,7 +1,7 @@
 import type { DataQualityWarning, ReportMeta } from "@/lib/data/types";
 import { formatLbp } from "@/lib/format/currency";
 import { cleanDisplayFileName } from "@/lib/format/filename";
-import { formatReportPeriod } from "@/lib/format/date";
+import { formatReportPeriod, formatFullDate } from "@/lib/format/date";
 
 const DEFINITIONS: Array<{ term: string; definition: string }> = [
   {
@@ -43,7 +43,7 @@ export function Methodology({
           estimated, interpolated, or invented. The Price Index, Comparability, Tier, and Outlier fields below
           are calculated from those raw prices using the fixed formulas defined here; they are not separate data
           sources. The one exception is the USD equivalent shown alongside LBP prices, which uses an external
-          exchange rate — {meta.fx_usd_rate.toLocaleString("en-US")} LBP/USD as of {meta.fx_rate_date}, sourced
+          exchange rate — {meta.fx_usd_rate.toLocaleString("en-US")} LBP/USD as of {formatFullDate(meta.fx_rate_date)}, sourced
           from {meta.fx_source} — since the spreadsheet itself contains no currency conversion. Note the FX rate
           date is later than the report period ({formatReportPeriod(meta.report_date)}); it reflects the rate at
           publication time, not at the time prices were originally collected. The Lebanese Lira has been broadly
