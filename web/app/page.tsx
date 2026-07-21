@@ -1,4 +1,5 @@
 import { loadReport } from "@/lib/data/loadReport";
+import { withBasePath } from "@/lib/basePath";
 import { computeSummaryKpis } from "@/lib/analytics/summary";
 import { prepareCategoryPositioning } from "@/lib/analytics/categoryPositioning";
 import { groupOutlierFindings } from "@/lib/analytics/findings";
@@ -10,6 +11,7 @@ import { FindingsRecommendations } from "@/components/FindingsRecommendations";
 import { PresenterModeToggle } from "@/components/PresenterModeToggle";
 import { DataExplorer } from "@/components/DataExplorer";
 import { ContextBar } from "@/components/ContextBar";
+import { Methodology } from "@/components/Methodology";
 import { PresenterModeProvider } from "@/lib/presenter/PresenterModeContext";
 
 export default function Home() {
@@ -25,7 +27,7 @@ export default function Home() {
       <div className="border-b border-ocean/10 bg-white px-6 pb-10 pt-8">
         <div className="mx-auto flex max-w-6xl items-start justify-between">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/ruya-logo.jpg" alt="Ru'ya 360" className="h-9 w-auto" />
+          <img src={withBasePath("/ruya-logo.jpg")} alt="Ru'ya 360" className="h-9 w-auto" />
           <PresenterModeToggle />
         </div>
         <div className="mx-auto mt-10 max-w-6xl">
@@ -43,6 +45,10 @@ export default function Home() {
       <main className="mx-auto max-w-6xl px-6">
         <Section title="Executive Summary" first>
           <ExecutiveSummary kpis={kpis} />
+        </Section>
+
+        <Section title="Methodology & Data Sources">
+          <Methodology meta={report.meta} warnings={report.data_quality_warnings} />
         </Section>
 
         <Section title="Category Positioning">

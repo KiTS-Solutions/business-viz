@@ -1,13 +1,11 @@
 import type { NextConfig } from "next";
-
-const REPO_NAME = "business-viz";
-const isGithubPagesBuild = process.env.GITHUB_PAGES === "true";
+import { BASE_PATH } from "./lib/basePath";
 
 const nextConfig: NextConfig = {
   output: "export",
   images: { unoptimized: true },
-  basePath: isGithubPagesBuild ? `/${REPO_NAME}` : "",
-  assetPrefix: isGithubPagesBuild ? `/${REPO_NAME}/` : "",
+  basePath: BASE_PATH,
+  assetPrefix: BASE_PATH ? `${BASE_PATH}/` : "",
 };
 
 export default nextConfig;
