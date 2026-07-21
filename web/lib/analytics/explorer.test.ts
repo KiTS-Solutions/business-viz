@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { searchProducts } from "./explorer";
+import { searchProducts, filterProducts, sortProducts, uniqueCategories } from "./explorer";
 import type { ProductAnalytics } from "../data/types";
 
-function product(category: string, name: string): ProductAnalytics {
+function product(category: string, name: string, overrides: Partial<ProductAnalytics> = {}): ProductAnalytics {
   return {
     category,
     product: name,
@@ -14,6 +14,7 @@ function product(category: string, name: string): ProductAnalytics {
     tier: "Core",
     is_outlier: false,
     outlier_direction: null,
+    ...overrides,
   };
 }
 
@@ -30,5 +31,57 @@ describe("searchProducts", () => {
 
   it("matches by category name", () => {
     expect(searchProducts(products, "pastries")).toEqual([products[1]]);
+  });
+});
+
+describe("filterProducts", () => {
+  const products = [
+    product("Hot", "A", { comparability: "high", is_outlier: false }),
+    product("Hot", "B", { comparability: "low", is_outlier: true }),
+    product("Cold", "C", { comparability: "medium", is_outlier: false }),
+  ];
+
+  it("filters by category", () => {
+    const result = filterProducts(products, { category: "Cold", comparability: null, outliersOnly: false });
+    expect(result).toEqual([products[2]]);
+  });
+
+  it("filters by comparability", () => {
+    const result = filterProducts(products, { category: null, comparability: "low", outliersOnly: false });
+    expect(result).toEqual([products[1]]);
+  });
+
+  it("filters to outliers only", () => {
+    const result = filterProducts(products, { category: null, comparability: null, outliersOnly: true });
+    expect(result).toEqual([products[1]]);
+  });
+
+  it("combines filters", () => {
+    const result = filterProducts(products, { category: "Hot", comparability: null, outliersOnly: true });
+    expect(result).toEqual([products[1]]);
+  });
+});
+
+describe("sortProducts", () => {
+  it("sorts by price_index ascending, nulls last regardless of direction", () => {
+    const products = [
+      product("Hot", "A", { price_index: 120 }),
+      product("Hot", "B", { price_index: null }),
+      product("Hot", "C", { price_index: 80 }),
+    ];
+    expect(sortProducts(products, "price_index", "asc").map((p) => p.product)).toEqual(["C", "A", "B"]);
+    expect(sortProducts(products, "price_index", "desc").map((p) => p.product)).toEqual(["A", "C", "B"]);
+  });
+
+  it("sorts by product name alphabetically", () => {
+    const products = [product("Hot", "Zebra"), product("Hot", "Apple")];
+    expect(sortProducts(products, "product", "asc").map((p) => p.product)).toEqual(["Apple", "Zebra"]);
+  });
+});
+
+describe("uniqueCategories", () => {
+  it("returns sorted unique category names", () => {
+    const products = [product("Zebra", "A"), product("Alpha", "B"), product("Zebra", "C")];
+    expect(uniqueCategories(products)).toEqual(["Alpha", "Zebra"]);
   });
 });
