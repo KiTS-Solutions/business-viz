@@ -21,12 +21,14 @@ describe("buildCategoryBrandHeatmap", () => {
     const hot = heatmap[0];
 
     // Stories: 300000 / avg(400000,400000)=400000 * 100 = 75
-    expect(hot.cells.find((c) => c.brand === "Stories")?.indexValue).toBe(75);
+    const storiesCell = hot.cells.find((c) => c.brand === "Stories");
+    expect(storiesCell?.indexValue).toBe(75);
+    expect(storiesCell?.status).toBe("priced");
     // Espresso Lab: 400000 / avg(300000,400000)=350000 * 100 = 114.3
     expect(hot.cells.find((c) => c.brand === "Espresso Lab")?.indexValue).toBe(114.3);
   });
 
-  it("returns null index for a brand with no price data in that category", () => {
+  it("marks a brand with no price data in that category as not-priced", () => {
     const rows: CategoryPriceMapRow[] = [
       {
         category: "Hot",
@@ -40,6 +42,26 @@ describe("buildCategoryBrandHeatmap", () => {
     const cell = heatmap[0].cells.find((c) => c.brand === "Espresso Lab");
     expect(cell?.indexValue).toBeNull();
     expect(cell?.avgPriceLbp).toBeNull();
+    expect(cell?.status).toBe("not-priced");
+  });
+
+  it("marks a brand that HAS a price but no peer to compare against as no-peer, not not-priced", () => {
+    const rows: CategoryPriceMapRow[] = [
+      {
+        category: "Frozen Yogurt",
+        brands: [{ brand: "Stories", avgPriceLbp: 250000, productCount: 42 }],
+        competitorMinLbp: null,
+        competitorMaxLbp: null,
+      },
+    ];
+
+    const heatmap = buildCategoryBrandHeatmap(rows, ["Stories", "Espresso Lab"]);
+    const storiesCell = heatmap[0].cells.find((c) => c.brand === "Stories");
+    expect(storiesCell?.status).toBe("no-peer");
+    expect(storiesCell?.indexValue).toBeNull();
+    // The real price must still be surfaced — this is the case the review
+    // flagged: a bare dash made the client's own priced category look empty.
+    expect(storiesCell?.avgPriceLbp).toBe(250000);
   });
 });
 

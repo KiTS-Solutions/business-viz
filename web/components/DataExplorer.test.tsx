@@ -67,4 +67,16 @@ describe("DataExplorer", () => {
     expect(screen.getByText("Item 26")).toBeInTheDocument();
     expect(screen.queryByText("Item 00")).not.toBeInTheDocument();
   });
+
+  it("visually flags a low-comparability index as unreliable instead of showing it at full weight", () => {
+    render(
+      <DataExplorer
+        products={[product("Hot", "Almond Milk LARGE", { comparability: "low", price_index: 233 })]}
+        fxRate={89600}
+        ownBrand="Stories"
+      />
+    );
+
+    expect(screen.getByText("233*")).toBeInTheDocument();
+  });
 });

@@ -10,8 +10,8 @@ describe("CategoryBrandHeatmap", () => {
           {
             category: "Hot",
             cells: [
-              { brand: "Stories", indexValue: 92, avgPriceLbp: 300000, productCount: 2 },
-              { brand: "Espresso Lab", indexValue: 108, avgPriceLbp: 350000, productCount: 1 },
+              { brand: "Stories", indexValue: 92, avgPriceLbp: 300000, productCount: 2, status: "priced" },
+              { brand: "Espresso Lab", indexValue: 108, avgPriceLbp: 350000, productCount: 1, status: "priced" },
             ],
           },
         ]}
@@ -27,13 +27,13 @@ describe("CategoryBrandHeatmap", () => {
     expect(screen.getByText("108")).toBeInTheDocument();
   });
 
-  it("renders a dash for cells with no price data", () => {
+  it("renders a dash for cells with no priced item at all", () => {
     render(
       <CategoryBrandHeatmap
         rows={[
           {
             category: "Hot",
-            cells: [{ brand: "Espresso Lab", indexValue: null, avgPriceLbp: null, productCount: 0 }],
+            cells: [{ brand: "Espresso Lab", indexValue: null, avgPriceLbp: null, productCount: 0, status: "not-priced" }],
           },
         ]}
         brands={["Espresso Lab"]}
@@ -42,5 +42,26 @@ describe("CategoryBrandHeatmap", () => {
     );
 
     expect(screen.getByText("—")).toBeInTheDocument();
+  });
+
+  it("renders the actual price (not a blank dash) for a priced item with no peer to compare against", () => {
+    render(
+      <CategoryBrandHeatmap
+        rows={[
+          {
+            category: "Frozen Yogurt",
+            cells: [
+              { brand: "Stories", indexValue: null, avgPriceLbp: 250000, productCount: 42, status: "no-peer" },
+            ],
+          },
+        ]}
+        brands={["Stories"]}
+        ownBrand="Stories"
+      />
+    );
+
+    // 250000 -> "250k", not a bare dash — this is the exact case the review flagged.
+    expect(screen.getByText("250k")).toBeInTheDocument();
+    expect(screen.queryByText("—")).not.toBeInTheDocument();
   });
 });

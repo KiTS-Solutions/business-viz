@@ -35,11 +35,17 @@ describe("Presenter mode", () => {
     );
 
     expect(screen.getByText(/Repricing Candidates/)).toBeInTheDocument();
+    expect(screen.getByText("Findings & Recommendations")).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Hide Recommendations" }));
     expect(screen.queryByText(/Repricing Candidates/)).not.toBeInTheDocument();
+    // The heading itself must also disappear — it used to be rendered by an
+    // outer wrapper regardless of presenter mode, leaving a bare heading
+    // floating over no content.
+    expect(screen.queryByText("Findings & Recommendations")).not.toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "Show Recommendations" }));
     expect(screen.getByText(/Repricing Candidates/)).toBeInTheDocument();
+    expect(screen.getByText("Findings & Recommendations")).toBeInTheDocument();
   });
 });

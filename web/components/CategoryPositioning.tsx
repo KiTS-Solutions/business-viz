@@ -41,10 +41,10 @@ export function CategoryPositioning({ rows }: { rows: CategoryPositioningRow[] }
               return (
                 <div className="rounded-md border border-ocean/10 bg-white px-3 py-2 text-sm shadow-md">
                   <p className="font-semibold text-ocean">{row.category}</p>
-                  <p className="text-ocean/70">
+                  <p className="text-ocean-muted">
                     {formatDeviation(row.deviation)} pts vs. market (index {row.avgIndex})
                   </p>
-                  <p className="text-xs text-ocean/40">
+                  <p className="text-xs text-ocean-muted">
                     Based on {row.countableProductCount} of {row.totalProductCount} products with reliable
                     competitor data
                   </p>

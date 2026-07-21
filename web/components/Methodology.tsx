@@ -1,5 +1,7 @@
 import type { DataQualityWarning, ReportMeta } from "@/lib/data/types";
 import { formatLbp } from "@/lib/format/currency";
+import { cleanDisplayFileName } from "@/lib/format/filename";
+import { formatReportPeriod } from "@/lib/format/date";
 
 const DEFINITIONS: Array<{ term: string; definition: string }> = [
   {
@@ -35,14 +37,17 @@ export function Methodology({
     <div className="space-y-6 text-sm">
       <div>
         <h3 className="mb-2 font-display text-base text-ocean">Where this data comes from</h3>
-        <p className="text-ocean/70">
+        <p className="text-ocean-muted">
           Every price in this report is taken directly from {meta.client}&apos;s pricing spreadsheet
-          {meta.generated_from ? ` (${meta.generated_from})` : ""} — no prices were estimated, interpolated, or
-          invented. The Price Index, Comparability, Tier, and Outlier fields below are calculated from those raw
-          prices using the fixed formulas defined here; they are not separate data sources. The one exception is
-          the USD equivalent shown alongside LBP prices, which uses an external exchange rate — {meta.fx_usd_rate.toLocaleString("en-US")}{" "}
-          LBP/USD as of {meta.fx_rate_date}, sourced from {meta.fx_source} — since the spreadsheet itself contains
-          no currency conversion.
+          {meta.generated_from ? ` (${cleanDisplayFileName(meta.generated_from)})` : ""} — no prices were
+          estimated, interpolated, or invented. The Price Index, Comparability, Tier, and Outlier fields below
+          are calculated from those raw prices using the fixed formulas defined here; they are not separate data
+          sources. The one exception is the USD equivalent shown alongside LBP prices, which uses an external
+          exchange rate — {meta.fx_usd_rate.toLocaleString("en-US")} LBP/USD as of {meta.fx_rate_date}, sourced
+          from {meta.fx_source} — since the spreadsheet itself contains no currency conversion. Note the FX rate
+          date is later than the report period ({formatReportPeriod(meta.report_date)}); it reflects the rate at
+          publication time, not at the time prices were originally collected. The Lebanese Lira has been broadly
+          stable against the dollar since, so the effect on USD figures is minimal.
         </p>
       </div>
 
@@ -52,7 +57,7 @@ export function Methodology({
           {DEFINITIONS.map((d) => (
             <div key={d.term}>
               <dt className="font-semibold text-ocean">{d.term}</dt>
-              <dd className="text-ocean/70">{d.definition}</dd>
+              <dd className="text-ocean-muted">{d.definition}</dd>
             </div>
           ))}
         </dl>
@@ -61,12 +66,12 @@ export function Methodology({
       {warnings.length > 0 && (
         <div>
           <h3 className="mb-2 font-display text-base text-ocean">Data quality notes</h3>
-          <p className="mb-2 text-ocean/70">
+          <p className="mb-2 text-ocean-muted">
             The source spreadsheet had {warnings.length} row{warnings.length === 1 ? "" : "s"} with a duplicate
             product entry carrying conflicting prices for the same brand. The most recent value in the sheet was
             kept; the earlier value is disclosed here rather than silently discarded.
           </p>
-          <ul className="space-y-1 text-ocean/70">
+          <ul className="space-y-1 text-ocean-muted">
             {warnings.map((w, i) => (
               <li key={i}>
                 <strong className="text-ocean">

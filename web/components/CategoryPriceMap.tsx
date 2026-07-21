@@ -47,9 +47,9 @@ function PointTooltip({
   const point = payload[0].payload;
   return (
     <div className="rounded-md border border-ocean/10 bg-white px-3 py-2 text-sm shadow-md">
-      <p className={point.isOwnBrand ? "font-semibold text-ocean" : "text-ocean/80"}>{point.brand}</p>
-      <p className="text-ocean/60">{formatDualCurrency(point.avgPriceLbp, fxRate)}</p>
-      <p className="text-xs text-ocean/40">
+      <p className={point.isOwnBrand ? "font-semibold text-ocean" : "text-ocean-muted"}>{point.brand}</p>
+      <p className="text-ocean-muted">{formatDualCurrency(point.avgPriceLbp, fxRate)}</p>
+      <p className="text-xs text-ocean-muted">
         {point.productCount} item{point.productCount === 1 ? "" : "s"} averaged
       </p>
     </div>
@@ -71,25 +71,30 @@ export function CategoryPriceMap({
     [rows, selectedCategory]
   );
 
+  // Indexed against visibleRows (what's actually displayed), not the full
+  // rows list — using the full-list index left a single filtered category
+  // positioned wherever it happened to sit in the unfiltered 25-row order
+  // (e.g. row 20 of 25), so the Y-axis auto-scaled to a near-empty 0-25
+  // range instead of tightly fitting the one visible row.
   const points: PricePoint[] = useMemo(
     () =>
       visibleRows.flatMap((row) =>
         row.brands.map((b) => ({
           category: row.category,
-          categoryIndex: categoryIndexOf(row.category, rows),
+          categoryIndex: categoryIndexOf(row.category, visibleRows),
           brand: b.brand,
           avgPriceLbp: b.avgPriceLbp,
           productCount: b.productCount,
           isOwnBrand: b.brand === ownBrand,
         }))
       ),
-    [visibleRows, rows, ownBrand]
+    [visibleRows, ownBrand]
   );
 
   const rangeBands = visibleRows
     .filter((r) => r.competitorMinLbp !== null && r.competitorMaxLbp !== null)
     .map((r) => {
-      const idx = categoryIndexOf(r.category, rows);
+      const idx = categoryIndexOf(r.category, visibleRows);
       return { category: r.category, y1: idx - 0.32, y2: idx + 0.32, x1: r.competitorMinLbp!, x2: r.competitorMaxLbp! };
     });
 
@@ -100,7 +105,7 @@ export function CategoryPriceMap({
   return (
     <div>
       <div className="mb-3 flex flex-wrap items-center gap-3">
-        <label htmlFor="category-map-filter" className="text-sm text-ocean/70">
+        <label htmlFor="category-map-filter" className="text-sm text-ocean-muted">
           Category
         </label>
         <select
@@ -116,7 +121,7 @@ export function CategoryPriceMap({
             </option>
           ))}
         </select>
-        <div className="ml-auto flex flex-wrap items-center gap-4 text-xs text-ocean/70">
+        <div className="ml-auto flex flex-wrap items-center gap-4 text-xs text-ocean-muted">
           <LegendChip color={BRAND_COLORS.stories} label={ownBrand} bold />
           {competitorBrands.map((b) => (
             <LegendChip key={b} color={CHART_COLORS[b] ?? CONTEXT_COLOR} label={b} />
@@ -129,7 +134,8 @@ export function CategoryPriceMap({
       </div>
 
       <div
-        className={selectedCategory ? "h-[280px] w-full" : "h-[920px] w-full"}
+        style={{ height: Math.max(180, visibleRows.length * 36 + 80) }}
+        className="w-full"
         aria-label="Category Price Positioning Map"
         data-testid="category-price-map"
       >
@@ -144,8 +150,9 @@ export function CategoryPriceMap({
             <YAxis
               type="number"
               dataKey="categoryIndex"
-              tickFormatter={(v: number) => rows[v]?.category ?? ""}
-              ticks={visibleRows.map((r) => categoryIndexOf(r.category, rows))}
+              domain={[-0.5, Math.max(0, visibleRows.length - 1) + 0.5]}
+              tickFormatter={(v: number) => visibleRows[v]?.category ?? ""}
+              ticks={visibleRows.map((r) => categoryIndexOf(r.category, visibleRows))}
               width={130}
               interval={0}
             />

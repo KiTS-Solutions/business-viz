@@ -9,7 +9,7 @@ export function ExecutiveSummary({ kpis }: { kpis: SummaryKpis }) {
       <KpiTile
         label="Overall Price Index"
         value={kpis.overallAvgIndex !== null ? `${kpis.overallAvgIndex}` : "—"}
-        sublabel="100 = at par with the market"
+        sublabel="unweighted avg. across categories; 100 = at par"
       />
       <KpiTile label="Items Benchmarked" value={String(kpis.itemsBenchmarked)} sublabel="menu items priced by Stories" />
       <KpiTile
@@ -39,9 +39,9 @@ export function ExecutiveSummary({ kpis }: { kpis: SummaryKpis }) {
 function KpiTile({ label, value, sublabel }: { label: string; value: string; sublabel: string }) {
   return (
     <div className="border-t-2 border-ocean/15 pt-3">
-      <p className="text-sm text-ocean/60">{label}</p>
+      <p className="text-sm text-ocean-muted">{label}</p>
       <p className="font-display text-4xl text-ocean">{value}</p>
-      <p className="mt-0.5 text-xs text-ocean/50">{sublabel}</p>
+      <p className="mt-0.5 text-xs text-ocean-muted">{sublabel}</p>
     </div>
   );
 }

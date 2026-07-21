@@ -26,7 +26,7 @@ const TIER_STYLE: Record<string, string> = {
 const COMPARABILITY_STYLE: Record<string, string> = {
   high: "bg-ocean text-white",
   medium: "border border-ocean/40 text-ocean",
-  low: "border border-ocean/20 text-ocean/50",
+  low: "border border-ocean/20 text-ocean-muted",
 };
 
 export function DataExplorer({
@@ -113,7 +113,7 @@ export function DataExplorer({
           <option value="medium">Medium</option>
           <option value="low">Low</option>
         </select>
-        <label className="flex items-center gap-1.5 text-sm text-ocean/70">
+        <label className="flex items-center gap-1.5 text-sm text-ocean-muted">
           <input
             type="checkbox"
             checked={filters.outliersOnly}
@@ -121,14 +121,17 @@ export function DataExplorer({
           />
           Outliers only
         </label>
-        <span className="text-xs text-ocean/50">
+        <span className="text-xs text-ocean-muted">
           {pageResult.totalItems} of {products.length}
         </span>
       </div>
+      <p className="mb-2 text-xs text-ocean-muted">
+        * = low comparability (only 1 competitor priced) — index shown for reference, not a reliable market read.
+      </p>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
-            <tr className="text-left text-ocean/60">
+            <tr className="text-left text-ocean-muted">
               <th className="py-2" aria-hidden="true" />
               <SortableHeader label="Category" column="category" onSort={handleSort} indicator={sortIndicator("category")} />
               <SortableHeader label="Product" column="product" onSort={handleSort} indicator={sortIndicator("product")} />
@@ -153,7 +156,7 @@ export function DataExplorer({
                     className={`cursor-pointer border-t border-ocean/10 hover:bg-ocean/5 ${p.is_outlier ? "bg-amber-50" : ""}`}
                     onClick={() => setExpandedKey(isExpanded ? null : key)}
                   >
-                    <td className="py-2 pl-1 text-ocean/40">{isExpanded ? "▾" : "▸"}</td>
+                    <td className="py-2 pl-1 text-ocean-muted">{isExpanded ? "▾" : "▸"}</td>
                     <td className="py-2">{p.category}</td>
                     <td className="py-2">
                       {p.product}
@@ -167,13 +170,13 @@ export function DataExplorer({
                       {p.own_price_lbp !== null ? formatDualCurrency(p.own_price_lbp, fxRate) : "—"}
                     </td>
                     <td className="py-2">
-                      <IndexBar value={p.price_index} />
+                      <IndexBar value={p.price_index} comparability={p.comparability} />
                     </td>
                     <td className="py-2">
                       {p.tier ? (
                         <span className={`rounded-full px-2 py-0.5 text-xs ${TIER_STYLE[p.tier]}`}>{p.tier}</span>
                       ) : (
-                        <span className="text-ocean/30">—</span>
+                        <span className="text-ocean-muted">—</span>
                       )}
                     </td>
                     <td className="py-2">
@@ -185,18 +188,18 @@ export function DataExplorer({
                   {isExpanded && (
                     <tr className="border-t border-ocean/5 bg-ocean/5">
                       <td colSpan={7} className="px-4 py-3">
-                        <p className="mb-2 text-xs font-semibold text-ocean/60">All brand prices for this item</p>
+                        <p className="mb-2 text-xs font-semibold text-ocean-muted">All brand prices for this item</p>
                         <div className="flex flex-wrap gap-4">
                           {Object.entries(p.prices_lbp).map(([brand, price]) => (
                             <div key={brand} className={brand === ownBrand ? "font-semibold" : ""}>
-                              <p className="text-xs text-ocean/50">{brand}</p>
+                              <p className="text-xs text-ocean-muted">{brand}</p>
                               <p style={{ color: brand === ownBrand ? BRAND_COLORS.stories : undefined }}>
                                 {formatDualCurrency(price, fxRate)}
                               </p>
                             </div>
                           ))}
                           {Object.keys(p.prices_lbp).length === 0 && (
-                            <p className="text-xs text-ocean/50">No brand priced this item.</p>
+                            <p className="text-xs text-ocean-muted">No brand priced this item.</p>
                           )}
                         </div>
                       </td>
@@ -210,7 +213,7 @@ export function DataExplorer({
       </div>
 
       {pageResult.totalPages > 1 && (
-        <div className="mt-4 flex items-center justify-center gap-3 text-sm text-ocean/60">
+        <div className="mt-4 flex items-center justify-center gap-3 text-sm text-ocean-muted">
           <button
             type="button"
             onClick={() => setPage((p) => p - 1)}
@@ -236,15 +239,25 @@ export function DataExplorer({
   );
 }
 
-function IndexBar({ value }: { value: number | null }) {
-  if (value === null) return <span className="text-ocean/30">—</span>;
+function IndexBar({ value, comparability }: { value: number | null; comparability: ProductAnalytics["comparability"] }) {
+  if (value === null) return <span className="text-ocean-muted">—</span>;
+
+  // Low comparability (0-1 competitors priced) means this index isn't a
+  // reliable market read — the pipeline itself excludes these from category
+  // averages and outlier flags. Showing them with the same bold color/bar as
+  // a reliable index overstates confidence a single data point doesn't earn.
+  const isReliable = comparability !== "low";
   const deviation = value - 100;
   const clamped = Math.max(-30, Math.min(30, deviation));
   const widthPct = (Math.abs(clamped) / 30) * 50; // half-bar max width on either side of center
   const color = deviation >= 0 ? SEMANTIC_COLORS.overpriced : SEMANTIC_COLORS.underpriced;
+
   return (
-    <div className="flex items-center gap-2">
-      <span className="w-9 tabular-nums">{Math.round(value)}</span>
+    <div className="flex items-center gap-2" title={isReliable ? undefined : "Low comparability — based on only 1 competitor, not a reliable market read"}>
+      <span className={`w-9 tabular-nums ${isReliable ? "" : "text-ocean-muted"}`}>
+        {Math.round(value)}
+        {!isReliable && "*"}
+      </span>
       <div className="relative h-2 w-16 rounded-sm bg-ocean/10">
         <div className="absolute left-1/2 top-0 h-full w-px bg-ocean/30" />
         <div
@@ -252,6 +265,7 @@ function IndexBar({ value }: { value: number | null }) {
           style={{
             width: `${widthPct}%`,
             backgroundColor: color,
+            opacity: isReliable ? 1 : 0.35,
             left: deviation >= 0 ? "50%" : `${50 - widthPct}%`,
           }}
         />
