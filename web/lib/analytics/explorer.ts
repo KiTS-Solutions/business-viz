@@ -29,8 +29,10 @@ export function filterProducts(products: ProductAnalytics[], filters: ExplorerFi
   });
 }
 
-export type SortColumn = "product" | "category" | "own_price_lbp" | "price_index";
+export type SortColumn = "product" | "category" | "own_price_lbp" | "price_index" | "tier";
 export type SortDirection = "asc" | "desc";
+
+const TIER_RANK: Record<string, number> = { Value: 1, Core: 2, Premium: 3 };
 
 export function sortProducts(
   products: ProductAnalytics[],
@@ -39,6 +41,14 @@ export function sortProducts(
 ): ProductAnalytics[] {
   const sign = direction === "asc" ? 1 : -1;
   return [...products].sort((a, b) => {
+    if (column === "tier") {
+      const av = a.tier ? TIER_RANK[a.tier] : null;
+      const bv = b.tier ? TIER_RANK[b.tier] : null;
+      if (av === null && bv === null) return 0;
+      if (av === null) return 1;
+      if (bv === null) return -1;
+      return sign * (av - bv);
+    }
     const av = a[column];
     const bv = b[column];
     if (av === null && bv === null) return 0;
@@ -52,4 +62,23 @@ export function sortProducts(
 
 export function uniqueCategories(products: ProductAnalytics[]): string[] {
   return Array.from(new Set(products.map((p) => p.category))).sort();
+}
+
+export interface Page<T> {
+  items: T[];
+  currentPage: number;
+  totalPages: number;
+  totalItems: number;
+}
+
+export function paginate<T>(items: T[], page: number, pageSize: number): Page<T> {
+  const totalPages = Math.max(1, Math.ceil(items.length / pageSize));
+  const currentPage = Math.min(Math.max(1, page), totalPages);
+  const start = (currentPage - 1) * pageSize;
+  return {
+    items: items.slice(start, start + pageSize),
+    currentPage,
+    totalPages,
+    totalItems: items.length,
+  };
 }

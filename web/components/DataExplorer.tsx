@@ -1,31 +1,64 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import type { ProductAnalytics } from "@/lib/data/types";
 import {
   searchProducts,
   filterProducts,
   sortProducts,
   uniqueCategories,
+  paginate,
   DEFAULT_EXPLORER_FILTERS,
   type SortColumn,
   type SortDirection,
 } from "@/lib/analytics/explorer";
 import { formatDualCurrency } from "@/lib/format/currency";
+import { BRAND_COLORS, SEMANTIC_COLORS } from "@/lib/theme/colors";
 
-export function DataExplorer({ products, fxRate }: { products: ProductAnalytics[]; fxRate: number }) {
+const PAGE_SIZE = 25;
+
+const TIER_STYLE: Record<string, string> = {
+  Value: "bg-ocean/10 text-ocean",
+  Core: "bg-ocean/30 text-ocean",
+  Premium: "bg-ocean text-white",
+};
+
+const COMPARABILITY_STYLE: Record<string, string> = {
+  high: "bg-ocean text-white",
+  medium: "border border-ocean/40 text-ocean",
+  low: "border border-ocean/20 text-ocean/50",
+};
+
+export function DataExplorer({
+  products,
+  fxRate,
+  ownBrand,
+}: {
+  products: ProductAnalytics[];
+  fxRate: number;
+  ownBrand: string;
+}) {
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState(DEFAULT_EXPLORER_FILTERS);
   const [sortColumn, setSortColumn] = useState<SortColumn>("category");
   const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
+  const [page, setPage] = useState(1);
+  const [expandedKey, setExpandedKey] = useState<string | null>(null);
 
   const categories = useMemo(() => uniqueCategories(products), [products]);
 
-  const rows = useMemo(() => {
+  const filteredSorted = useMemo(() => {
     const searched = searchProducts(products, query);
     const filtered = filterProducts(searched, filters);
     return sortProducts(filtered, sortColumn, sortDirection);
   }, [products, query, filters, sortColumn, sortDirection]);
+
+  // Reset to page 1 whenever the result set changes shape (new search/filter/sort).
+  useEffect(() => {
+    setPage(1);
+  }, [query, filters, sortColumn, sortDirection]);
+
+  const pageResult = paginate(filteredSorted, page, PAGE_SIZE);
 
   function handleSort(column: SortColumn) {
     if (column === sortColumn) {
@@ -89,51 +122,144 @@ export function DataExplorer({ products, fxRate }: { products: ProductAnalytics[
           Outliers only
         </label>
         <span className="text-xs text-ocean/50">
-          {rows.length} of {products.length}
+          {pageResult.totalItems} of {products.length}
         </span>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
             <tr className="text-left text-ocean/60">
+              <th className="py-2" aria-hidden="true" />
               <SortableHeader label="Category" column="category" onSort={handleSort} indicator={sortIndicator("category")} />
               <SortableHeader label="Product" column="product" onSort={handleSort} indicator={sortIndicator("product")} />
               <SortableHeader
-                label="Stories Price"
+                label={`${ownBrand} Price`}
                 column="own_price_lbp"
                 onSort={handleSort}
                 indicator={sortIndicator("own_price_lbp")}
               />
               <SortableHeader label="Index" column="price_index" onSort={handleSort} indicator={sortIndicator("price_index")} />
+              <SortableHeader label="Tier" column="tier" onSort={handleSort} indicator={sortIndicator("tier")} />
               <th className="py-2">Comparability</th>
             </tr>
           </thead>
           <tbody>
-            {rows.map((p) => (
-              <tr
-                key={`${p.category}-${p.product}`}
-                className={`border-t border-ocean/10 ${p.is_outlier ? "bg-amber-50" : ""}`}
-              >
-                <td className="py-2">{p.category}</td>
-                <td className="py-2">
-                  {p.product}
-                  {p.is_outlier && (
-                    <span className="ml-1" title={p.outlier_direction ?? undefined}>
-                      {p.outlier_direction === "overpriced" ? "▲" : "▼"}
-                    </span>
+            {pageResult.items.map((p) => {
+              const key = `${p.category}-${p.product}`;
+              const isExpanded = expandedKey === key;
+              return (
+                <Fragment key={key}>
+                  <tr
+                    className={`cursor-pointer border-t border-ocean/10 hover:bg-ocean/5 ${p.is_outlier ? "bg-amber-50" : ""}`}
+                    onClick={() => setExpandedKey(isExpanded ? null : key)}
+                  >
+                    <td className="py-2 pl-1 text-ocean/40">{isExpanded ? "▾" : "▸"}</td>
+                    <td className="py-2">{p.category}</td>
+                    <td className="py-2">
+                      {p.product}
+                      {p.is_outlier && (
+                        <span className="ml-1" title={p.outlier_direction ?? undefined}>
+                          {p.outlier_direction === "overpriced" ? "▲" : "▼"}
+                        </span>
+                      )}
+                    </td>
+                    <td className="py-2">
+                      {p.own_price_lbp !== null ? formatDualCurrency(p.own_price_lbp, fxRate) : "—"}
+                    </td>
+                    <td className="py-2">
+                      <IndexBar value={p.price_index} />
+                    </td>
+                    <td className="py-2">
+                      {p.tier ? (
+                        <span className={`rounded-full px-2 py-0.5 text-xs ${TIER_STYLE[p.tier]}`}>{p.tier}</span>
+                      ) : (
+                        <span className="text-ocean/30">—</span>
+                      )}
+                    </td>
+                    <td className="py-2">
+                      <span className={`rounded-full px-2 py-0.5 text-xs ${COMPARABILITY_STYLE[p.comparability]}`}>
+                        {p.comparability}
+                      </span>
+                    </td>
+                  </tr>
+                  {isExpanded && (
+                    <tr className="border-t border-ocean/5 bg-ocean/5">
+                      <td colSpan={7} className="px-4 py-3">
+                        <p className="mb-2 text-xs font-semibold text-ocean/60">All brand prices for this item</p>
+                        <div className="flex flex-wrap gap-4">
+                          {Object.entries(p.prices_lbp).map(([brand, price]) => (
+                            <div key={brand} className={brand === ownBrand ? "font-semibold" : ""}>
+                              <p className="text-xs text-ocean/50">
+                                {brand}
+                                {brand === ownBrand ? " (client)" : ""}
+                              </p>
+                              <p style={{ color: brand === ownBrand ? BRAND_COLORS.stories : undefined }}>
+                                {formatDualCurrency(price, fxRate)}
+                              </p>
+                            </div>
+                          ))}
+                          {Object.keys(p.prices_lbp).length === 0 && (
+                            <p className="text-xs text-ocean/50">No brand priced this item.</p>
+                          )}
+                        </div>
+                      </td>
+                    </tr>
                   )}
-                </td>
-                <td className="py-2">
-                  {p.own_price_lbp !== null ? formatDualCurrency(p.own_price_lbp, fxRate) : "—"}
-                </td>
-                <td className="py-2">{p.price_index ?? "—"}</td>
-                <td className="py-2">{p.comparability}</td>
-              </tr>
-            ))}
+                </Fragment>
+              );
+            })}
           </tbody>
         </table>
       </div>
+
+      {pageResult.totalPages > 1 && (
+        <div className="mt-4 flex items-center justify-center gap-3 text-sm text-ocean/60">
+          <button
+            type="button"
+            onClick={() => setPage((p) => p - 1)}
+            disabled={pageResult.currentPage <= 1}
+            className="rounded-md border border-ocean/20 px-3 py-1 disabled:opacity-30"
+          >
+            Previous
+          </button>
+          <span>
+            Page {pageResult.currentPage} of {pageResult.totalPages}
+          </span>
+          <button
+            type="button"
+            onClick={() => setPage((p) => p + 1)}
+            disabled={pageResult.currentPage >= pageResult.totalPages}
+            className="rounded-md border border-ocean/20 px-3 py-1 disabled:opacity-30"
+          >
+            Next
+          </button>
+        </div>
+      )}
     </section>
+  );
+}
+
+function IndexBar({ value }: { value: number | null }) {
+  if (value === null) return <span className="text-ocean/30">—</span>;
+  const deviation = value - 100;
+  const clamped = Math.max(-30, Math.min(30, deviation));
+  const widthPct = (Math.abs(clamped) / 30) * 50; // half-bar max width on either side of center
+  const color = deviation >= 0 ? SEMANTIC_COLORS.overpriced : SEMANTIC_COLORS.underpriced;
+  return (
+    <div className="flex items-center gap-2">
+      <span className="w-9 tabular-nums">{Math.round(value)}</span>
+      <div className="relative h-2 w-16 rounded-sm bg-ocean/10">
+        <div className="absolute left-1/2 top-0 h-full w-px bg-ocean/30" />
+        <div
+          className="absolute top-0 h-full rounded-sm"
+          style={{
+            width: `${widthPct}%`,
+            backgroundColor: color,
+            left: deviation >= 0 ? "50%" : `${50 - widthPct}%`,
+          }}
+        />
+      </div>
+    </div>
   );
 }
 

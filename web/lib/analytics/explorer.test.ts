@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { searchProducts, filterProducts, sortProducts, uniqueCategories } from "./explorer";
+import { searchProducts, filterProducts, sortProducts, uniqueCategories, paginate } from "./explorer";
 import type { ProductAnalytics } from "../data/types";
 
 function product(category: string, name: string, overrides: Partial<ProductAnalytics> = {}): ProductAnalytics {
@@ -77,11 +77,51 @@ describe("sortProducts", () => {
     const products = [product("Hot", "Zebra"), product("Hot", "Apple")];
     expect(sortProducts(products, "product", "asc").map((p) => p.product)).toEqual(["Apple", "Zebra"]);
   });
+
+  it("sorts by tier in Value < Core < Premium order, not alphabetically, nulls last", () => {
+    const products = [
+      product("Hot", "A", { tier: "Premium" }),
+      product("Hot", "B", { tier: "Value" }),
+      product("Hot", "C", { tier: null }),
+      product("Hot", "D", { tier: "Core" }),
+    ];
+    expect(sortProducts(products, "tier", "asc").map((p) => p.product)).toEqual(["B", "D", "A", "C"]);
+    expect(sortProducts(products, "tier", "desc").map((p) => p.product)).toEqual(["A", "D", "B", "C"]);
+  });
 });
 
 describe("uniqueCategories", () => {
   it("returns sorted unique category names", () => {
     const products = [product("Zebra", "A"), product("Alpha", "B"), product("Zebra", "C")];
     expect(uniqueCategories(products)).toEqual(["Alpha", "Zebra"]);
+  });
+});
+
+describe("paginate", () => {
+  const items = Array.from({ length: 45 }, (_, i) => i);
+
+  it("returns the requested page of items", () => {
+    const page = paginate(items, 2, 20);
+    expect(page.items).toEqual(items.slice(20, 40));
+    expect(page.currentPage).toBe(2);
+    expect(page.totalPages).toBe(3);
+    expect(page.totalItems).toBe(45);
+  });
+
+  it("clamps to the last page when requested page exceeds total pages", () => {
+    const page = paginate(items, 99, 20);
+    expect(page.currentPage).toBe(3);
+    expect(page.items).toEqual(items.slice(40, 45));
+  });
+
+  it("clamps to page 1 when requested page is below 1", () => {
+    const page = paginate(items, 0, 20);
+    expect(page.currentPage).toBe(1);
+  });
+
+  it("always returns at least 1 total page, even for an empty list", () => {
+    const page = paginate([], 1, 20);
+    expect(page.totalPages).toBe(1);
+    expect(page.items).toEqual([]);
   });
 });

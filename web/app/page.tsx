@@ -88,7 +88,11 @@ export default function Home() {
         </Section>
 
         <Section title="Full Data Explorer" last>
-          <DataExplorer products={report.products} fxRate={report.meta.fx_usd_rate} />
+          <p className="mb-5 max-w-2xl text-sm text-ocean/60">
+            Every priced line item, with search, filters, and sortable columns. Click a row to see every brand&apos;s
+            price for that item side by side — not just {report.meta.client}&apos;s.
+          </p>
+          <DataExplorer products={report.products} fxRate={report.meta.fx_usd_rate} ownBrand={report.meta.own_brand} />
         </Section>
       </main>
 
