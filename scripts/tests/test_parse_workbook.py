@@ -146,3 +146,75 @@ def test_parse_workbook_header_has_extra_brands_not_in_config(tmp_path):
         assert "do not match config's expected brands" in error_msg
         assert "E" in error_msg
         assert "Present in header but not in config" in error_msg
+
+
+def test_parse_workbook_skips_dropped_categories(tmp_path):
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.append(["Products Competitors", "Stories ", "Espresso Lab", "Dunkin Donuts",
+               "Joe & the Juice", "Starbucks ", "Average", "Difference"])
+    ws.append(["Black Coffee", None, None, None, None, None, None, None])
+    ws.append(["Double Espresso Macchiato", 300000, "-", "-", "-", "-", 300000, 0])
+    ws.append(["Salads", None, None, None, None, None, None, None])
+    ws.append(["Quinoa Salad", 770000, "-", "-", "-", "-", 770000, 0])
+    path = tmp_path / "sample_dropped.xlsx"
+    wb.save(path)
+
+    config = _config()
+    config["dropped_categories"] = ["Salads"]
+
+    result = parse_workbook(str(path), config)
+
+    categories = {r["category"] for r in result["records"]}
+    assert categories == {"Black Coffee"}
+    assert all(r["product"] != "Quinoa Salad" for r in result["records"])
+
+
+def test_parse_workbook_without_dropped_categories_key_is_unaffected(tmp_path):
+    xlsx_path = _build_workbook(tmp_path)
+    result = parse_workbook(xlsx_path, _config())
+    assert len(result["records"]) == 5
+
+
+def test_parse_workbook_accepts_avg_as_average_header(tmp_path):
+    """Some sheets label the average column 'Avg' instead of 'Average'
+    (e.g. the real Non-Dairy Product Pricing Comparison file) — the
+    average-column locator must accept both."""
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.append(["Products Competitors", "Stories ", "Espresso Lab", "Dunkin Donuts",
+               "Joe & the Juice", "Starbucks ", "Avg", "Dif."])
+    ws.append(["Black Coffee", None, None, None, None, None, None, None])
+    ws.append(["Double Espresso Macchiato", 300000, "-", "-", "-", "-", 300000, 0])
+    path = tmp_path / "sample_avg_header.xlsx"
+    wb.save(path)
+
+    result = parse_workbook(str(path), _config())
+
+    assert len(result["records"]) == 1
+    assert result["records"][0]["price_lbp"] == 300000
+
+
+def test_parse_workbook_applies_brand_aliases(tmp_path):
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws.append(["Products Competitors", "Stories ", "Esp. Lab", "D. Donuts",
+               "J & J", "Starbucks ", "Avg", "Dif."])
+    ws.append(["Mixed Hot Beverages", None, None, None, None, None, None, None])
+    ws.append(["Cappuccino MEDIUM", 600000, 650000, 576000, 554900, 550000, 586180, 13820])
+    path = tmp_path / "sample_aliased.xlsx"
+    wb.save(path)
+
+    config = _config()
+    config["brand_aliases"] = {
+        "Esp. Lab": "Espresso Lab",
+        "D. Donuts": "Dunkin Donuts",
+        "J & J": "Joe & the Juice",
+    }
+
+    result = parse_workbook(str(path), config)
+
+    brands = {r["brand"] for r in result["records"]}
+    assert brands == {"Stories", "Espresso Lab", "Dunkin Donuts", "Joe & the Juice", "Starbucks"}
+    cappuccino_stories = [r for r in result["records"] if r["product"] == "Cappuccino MEDIUM" and r["brand"] == "Stories"]
+    assert cappuccino_stories[0]["price_lbp"] == 600000

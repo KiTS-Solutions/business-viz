@@ -21,10 +21,13 @@ def parse_workbook(xlsx_path: str, config: dict) -> dict:
 
     header = rows[0]
 
-    # Locate "Average" column to determine the actual brand column span
+    # Locate the average column to determine the actual brand column span.
+    # Most sheets label it "Average"; the Non-Dairy comparison file labels
+    # it "Avg" instead — accept both rather than adding a config key for
+    # what is a structural header-label variant, not client-specific data.
     average_col_index = None
     for i, col_header in enumerate(header):
-        if _clean(col_header) == "Average":
+        if _clean(col_header) in ("Average", "Avg"):
             average_col_index = i
             break
 
@@ -34,8 +37,12 @@ def parse_workbook(xlsx_path: str, config: dict) -> dict:
             "sheet layout does not match the expected template."
         )
 
-    # Extract the FULL actual set of brand columns from the file
-    brand_columns = [_clean(h) for h in header[1:average_col_index]]
+    # Extract the FULL actual set of brand columns from the file, then
+    # translate any header text an alias covers (e.g. "Esp. Lab" -> "Espresso
+    # Lab") to the canonical brand name before validating against config.
+    brand_aliases = {_clean(k): _clean(v) for k, v in config.get("brand_aliases", {}).items()}
+    raw_brand_columns = [_clean(h) for h in header[1:average_col_index]]
+    brand_columns = [brand_aliases.get(b, b) for b in raw_brand_columns]
 
     # Validate that header brands match config brands (bidirectional check)
     expected_brands = {_clean(config["own_brand"]), *[_clean(c) for c in config["competitors"]]}
@@ -50,6 +57,8 @@ def parse_workbook(xlsx_path: str, config: dict) -> dict:
             f"Present in header but not in config: {sorted(extra) or 'none'}."
         )
 
+    dropped_categories = {_clean(c) for c in config.get("dropped_categories", [])}
+
     fx_rate = config["fx_usd_rate"]
     records = []
     current_category = None
@@ -61,6 +70,9 @@ def parse_workbook(xlsx_path: str, config: dict) -> dict:
 
         if is_category_header_row(row):
             current_category = product
+            continue
+
+        if current_category in dropped_categories:
             continue
 
         for i, brand in enumerate(brand_columns):
