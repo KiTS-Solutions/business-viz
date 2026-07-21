@@ -16,6 +16,7 @@ import { PresenterModeToggle } from "@/components/PresenterModeToggle";
 import { DataExplorer } from "@/components/DataExplorer";
 import { ContextBar } from "@/components/ContextBar";
 import { Methodology } from "@/components/Methodology";
+import { Section } from "@/components/Section";
 import { PresenterModeProvider } from "@/lib/presenter/PresenterModeContext";
 
 export default function Home() {
@@ -109,24 +110,5 @@ export default function Home() {
         </div>
       </footer>
     </PresenterModeProvider>
-  );
-}
-
-function Section({
-  title,
-  children,
-  first,
-  last,
-}: {
-  title: string;
-  children: React.ReactNode;
-  first?: boolean;
-  last?: boolean;
-}) {
-  return (
-    <section className={`${first ? "pt-10" : "pt-12"} ${last ? "pb-14" : "border-b border-ocean/10 pb-12"}`}>
-      <h2 className="mb-5 font-display text-xl text-ocean">{title}</h2>
-      {children}
-    </section>
   );
 }
