@@ -9,6 +9,8 @@ export interface BrandPricePoint {
 export interface CategoryPriceMapRow {
   category: string;
   brands: BrandPricePoint[];
+  competitorMinLbp: number | null;
+  competitorMaxLbp: number | null;
 }
 
 /**
@@ -17,7 +19,7 @@ export interface CategoryPriceMapRow {
  * ProductAnalytics.prices_lbp directly (already has every brand that priced
  * that product), so no pipeline changes are needed.
  */
-export function buildCategoryPriceMap(products: ProductAnalytics[]): CategoryPriceMapRow[] {
+export function buildCategoryPriceMap(products: ProductAnalytics[], ownBrand: string): CategoryPriceMapRow[] {
   const byCategory = new Map<string, Map<string, { sum: number; count: number }>>();
 
   for (const product of products) {
@@ -35,14 +37,20 @@ export function buildCategoryPriceMap(products: ProductAnalytics[]): CategoryPri
   }
 
   return Array.from(byCategory.entries())
-    .map(([category, brandTotals]) => ({
-      category,
-      brands: Array.from(brandTotals.entries()).map(([brand, { sum, count }]) => ({
+    .map(([category, brandTotals]) => {
+      const brands = Array.from(brandTotals.entries()).map(([brand, { sum, count }]) => ({
         brand,
         avgPriceLbp: Math.round(sum / count),
         productCount: count,
-      })),
-    }))
+      }));
+      const competitorPrices = brands.filter((b) => b.brand !== ownBrand).map((b) => b.avgPriceLbp);
+      return {
+        category,
+        brands,
+        competitorMinLbp: competitorPrices.length ? Math.min(...competitorPrices) : null,
+        competitorMaxLbp: competitorPrices.length ? Math.max(...competitorPrices) : null,
+      };
+    })
     .sort((a, b) => a.category.localeCompare(b.category));
 }
 

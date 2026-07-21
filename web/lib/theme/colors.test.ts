@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { BRAND_COLORS, COMPETITOR_COLORS, SEMANTIC_COLORS } from "./colors";
+import { BRAND_COLORS, COMPETITOR_COLORS, SEMANTIC_COLORS, CONTEXT_COLOR } from "./colors";
 
 describe("theme colors", () => {
   it("assigns Stories to Ocean", () => {
@@ -17,5 +17,10 @@ describe("theme colors", () => {
     const brandHues = Object.values(COMPETITOR_COLORS);
     expect(brandHues).not.toContain(SEMANTIC_COLORS.overpriced);
     expect(brandHues).not.toContain(SEMANTIC_COLORS.underpriced);
+  });
+
+  it("keeps the emphasis context color distinct from Stories' brand color", () => {
+    expect(CONTEXT_COLOR).not.toBe(BRAND_COLORS.stories);
+    expect(CONTEXT_COLOR).toMatch(/^#[0-9a-f]{6}$/i);
   });
 });

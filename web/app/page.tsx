@@ -17,57 +17,88 @@ export default function Home() {
   const kpis = computeSummaryKpis(report);
   const positioningRows = prepareCategoryPositioning(report.categories);
   const findings = groupOutlierFindings(report.products);
-  const priceMapRows = buildCategoryPriceMap(report.products);
+  const priceMapRows = buildCategoryPriceMap(report.products, report.meta.own_brand);
 
   return (
     <PresenterModeProvider>
-      <ContextBar meta={report.meta} coveragePct={kpis.coveragePct} />
-      <main className="mx-auto max-w-6xl space-y-10 px-6 py-8">
-        <header className="flex items-center justify-between border-b border-ocean/10 pb-6">
+      {/* Cover */}
+      <div className="border-b border-ocean/10 bg-white px-6 pb-10 pt-8">
+        <div className="mx-auto flex max-w-6xl items-start justify-between">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/ruya-logo.jpg" alt="Ru'ya 360" className="h-10 w-auto" />
-          <div className="text-right">
-            <h1 className="font-display text-2xl text-ocean">Stories Pricing Benchmark</h1>
-            <p className="text-xs text-ocean/60">Prepared for Stories by Ru&apos;ya 360</p>
-          </div>
-        </header>
-
-        <div className="flex justify-end">
+          <img src="/ruya-logo.jpg" alt="Ru'ya 360" className="h-9 w-auto" />
           <PresenterModeToggle />
         </div>
+        <div className="mx-auto mt-10 max-w-6xl">
+          <p className="text-xs uppercase tracking-widest text-ocean/50">Pricing Strategy Advisory</p>
+          <h1 className="mt-2 font-display text-4xl text-ocean sm:text-5xl">Stories Pricing Benchmark</h1>
+          <p className="mt-3 max-w-2xl text-sm text-ocean/60">
+            A full-menu competitive price positioning analysis for {report.meta.client}, benchmarked against{" "}
+            {report.meta.competitors.length} market competitors.
+          </p>
+        </div>
+      </div>
 
-        <ExecutiveSummary kpis={kpis} />
+      <ContextBar meta={report.meta} coveragePct={kpis.coveragePct} />
 
-        <section>
-          <h2 className="mb-3 font-display text-lg text-ocean">Category Positioning</h2>
-          <p className="mb-4 text-sm text-ocean/60">
-            Stories&apos; average price index vs. the competitive market, by category. Positive
-            = above market, negative = below market.
+      <main className="mx-auto max-w-6xl px-6">
+        <Section title="Executive Summary" first>
+          <ExecutiveSummary kpis={kpis} />
+        </Section>
+
+        <Section title="Category Positioning">
+          <p className="mb-5 max-w-2xl text-sm text-ocean/60">
+            {report.meta.client}&apos;s average price index vs. the competitive market, by category. Positive means
+            priced above the market; negative means priced below it.
           </p>
           <CategoryPositioning rows={positioningRows} />
-        </section>
+        </Section>
 
-        <section>
-          <h2 className="mb-3 font-display text-lg text-ocean">Price Positioning Map</h2>
-          <p className="mb-4 text-sm text-ocean/60">
-            Every brand&apos;s average price per category — Stories highlighted in Ocean. Use
-            the filter to drill into a single category.
+        <Section title="Price Positioning Map">
+          <p className="mb-5 max-w-2xl text-sm text-ocean/60">
+            Every brand&apos;s average price per category. {report.meta.client} is shown in Ocean; competitor
+            brands sit in gray, with a shaded band marking their price range — where {report.meta.client}&apos;s
+            dot falls inside, at the edge, or outside that band is the read. Filter to a single category for a
+            closer look.
           </p>
           <CategoryPriceMap rows={priceMapRows} fxRate={report.meta.fx_usd_rate} ownBrand={report.meta.own_brand} />
-        </section>
+        </Section>
 
-        <FindingsRecommendations findings={findings} fxRate={report.meta.fx_usd_rate} />
+        <Section title="Findings & Recommendations">
+          <FindingsRecommendations findings={findings} fxRate={report.meta.fx_usd_rate} />
+        </Section>
 
-        <section>
-          <h2 className="mb-3 font-display text-lg text-ocean">Full Data Explorer</h2>
+        <Section title="Full Data Explorer" last>
           <DataExplorer products={report.products} fxRate={report.meta.fx_usd_rate} />
-        </section>
-
-        <footer className="border-t border-ocean/10 pt-6 text-xs text-ocean/50">
-          <p>Confidential — prepared for Stories by Ru&apos;ya 360. Not for external distribution.</p>
-          <p>Report period: {report.meta.report_date} · Generated from {report.meta.generated_from ?? "source data"}.</p>
-        </footer>
+        </Section>
       </main>
+
+      <footer className="mt-4 border-t border-ocean/10 bg-ocean/5 px-6 py-6 text-xs text-ocean/50">
+        <div className="mx-auto max-w-6xl">
+          <p>Confidential — prepared for {report.meta.client} by Ru&apos;ya 360. Not for external distribution.</p>
+          <p className="mt-1">
+            Report period: {report.meta.report_date} · Source: {report.meta.generated_from ?? "internal pricing data"}.
+          </p>
+        </div>
+      </footer>
     </PresenterModeProvider>
+  );
+}
+
+function Section({
+  title,
+  children,
+  first,
+  last,
+}: {
+  title: string;
+  children: React.ReactNode;
+  first?: boolean;
+  last?: boolean;
+}) {
+  return (
+    <section className={`${first ? "pt-10" : "pt-12"} ${last ? "pb-14" : "border-b border-ocean/10 pb-12"}`}>
+      <h2 className="mb-5 font-display text-xl text-ocean">{title}</h2>
+      {children}
+    </section>
   );
 }

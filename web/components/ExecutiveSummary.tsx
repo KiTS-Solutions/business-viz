@@ -16,9 +16,9 @@ export function ExecutiveSummary({ kpis }: { kpis: SummaryKpis }) {
 
 function KpiTile({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-lg border border-ocean/10 bg-white p-4 shadow-sm">
-      <p className="text-sm text-ocean/70">{label}</p>
-      <p className="font-display text-3xl text-ocean">{value}</p>
+    <div className="border-t-2 border-ocean/15 pt-3">
+      <p className="text-sm text-ocean/60">{label}</p>
+      <p className="font-display text-4xl text-ocean">{value}</p>
     </div>
   );
 }
