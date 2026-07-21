@@ -4,9 +4,11 @@ import { computeSummaryKpis } from "@/lib/analytics/summary";
 import { prepareCategoryPositioning } from "@/lib/analytics/categoryPositioning";
 import { groupOutlierFindings } from "@/lib/analytics/findings";
 import { buildCategoryPriceMap } from "@/lib/analytics/positioningMap";
+import { buildCategoryBrandHeatmap } from "@/lib/analytics/heatmap";
 import { ExecutiveSummary } from "@/components/ExecutiveSummary";
 import { CategoryPositioning } from "@/components/CategoryPositioning";
 import { CategoryPriceMap } from "@/components/CategoryPriceMap";
+import { CategoryBrandHeatmap } from "@/components/CategoryBrandHeatmap";
 import { FindingsRecommendations } from "@/components/FindingsRecommendations";
 import { PresenterModeToggle } from "@/components/PresenterModeToggle";
 import { DataExplorer } from "@/components/DataExplorer";
@@ -20,6 +22,8 @@ export default function Home() {
   const positioningRows = prepareCategoryPositioning(report.categories);
   const findings = groupOutlierFindings(report.products);
   const priceMapRows = buildCategoryPriceMap(report.products, report.meta.own_brand);
+  const allBrands = [report.meta.own_brand, ...report.meta.competitors];
+  const heatmapRows = buildCategoryBrandHeatmap(priceMapRows, allBrands);
 
   return (
     <PresenterModeProvider>
@@ -47,14 +51,24 @@ export default function Home() {
           <ExecutiveSummary kpis={kpis} />
         </Section>
 
+        <Section title="Competitive Landscape at a Glance">
+          <p className="mb-5 max-w-2xl text-sm text-ocean/60">
+            Every category against every brand in one grid — each cell is that brand&apos;s average price
+            relative to the other brands priced in that category (100 = at par with peers). Red = priced above
+            peers, violet = priced below, gray = no data. {report.meta.client}&apos;s column is outlined.
+          </p>
+          <CategoryBrandHeatmap rows={heatmapRows} brands={allBrands} ownBrand={report.meta.own_brand} />
+        </Section>
+
         <Section title="Methodology & Data Sources">
           <Methodology meta={report.meta} warnings={report.data_quality_warnings} />
         </Section>
 
         <Section title="Category Positioning">
           <p className="mb-5 max-w-2xl text-sm text-ocean/60">
-            {report.meta.client}&apos;s average price index vs. the competitive market, by category. Positive means
-            priced above the market; negative means priced below it.
+            A closer, {report.meta.client}-focused view: how far {report.meta.client} sits above or below the
+            competitor-only average in each category. This is the same relationship as the heatmap above, isolated
+            to {report.meta.client} and shown as a deviation from market rather than an index.
           </p>
           <CategoryPositioning rows={positioningRows} />
         </Section>
