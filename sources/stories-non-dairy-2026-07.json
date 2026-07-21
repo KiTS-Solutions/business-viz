@@ -1,23 +1,15 @@
 {
   "client": "Stories",
-  "report_date": "2026-03-01",
+  "report_date": "2026-07-22",
   "currency": "LBP",
   "fx_usd_rate": 89600,
   "fx_rate_date": "2026-07-20",
   "fx_source": "lira-rate.com / lbprate.com market average (parallel/market rate)",
   "own_brand": "Stories",
   "competitors": ["Espresso Lab", "Dunkin Donuts", "Joe & the Juice", "Starbucks"],
-  "dropped_categories": [
-    "Milkshakes",
-    "Protein Shakes",
-    "Salads",
-    "Sandwiches",
-    "Frozen Yogurt",
-    "Toppings",
-    "Luxury Toppings",
-    "Pizza",
-    "Wraps",
-    "Gluten Free",
-    "Plat Du Jour"
-  ]
+  "brand_aliases": {
+    "Esp. Lab": "Espresso Lab",
+    "D. Donuts": "Dunkin Donuts",
+    "J & J": "Joe & the Juice"
+  }
 }
