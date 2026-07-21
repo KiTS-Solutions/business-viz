@@ -25,7 +25,7 @@ const findings: FindingsGroups = {
 };
 
 describe("Presenter mode", () => {
-  it("hides and re-shows the Findings section on toggle", async () => {
+  it("hides the Findings section by default, and shows/hides it on toggle", async () => {
     const user = userEvent.setup();
     render(
       <PresenterModeProvider>
@@ -34,18 +34,20 @@ describe("Presenter mode", () => {
       </PresenterModeProvider>
     );
 
-    expect(screen.getByText(/Repricing Candidates/)).toBeInTheDocument();
-    expect(screen.getByText("Findings & Recommendations")).toBeInTheDocument();
-
-    await user.click(screen.getByRole("button", { name: "Hide Recommendations" }));
+    // Explanations are hidden by default now (was shown by default before).
     expect(screen.queryByText(/Repricing Candidates/)).not.toBeInTheDocument();
-    // The heading itself must also disappear — it used to be rendered by an
-    // outer wrapper regardless of presenter mode, leaving a bare heading
-    // floating over no content.
     expect(screen.queryByText("Findings & Recommendations")).not.toBeInTheDocument();
 
-    await user.click(screen.getByRole("button", { name: "Show Recommendations" }));
+    await user.click(screen.getByRole("button", { name: "Show Explanations" }));
     expect(screen.getByText(/Repricing Candidates/)).toBeInTheDocument();
     expect(screen.getByText("Findings & Recommendations")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Hide Explanations" }));
+    expect(screen.queryByText(/Repricing Candidates/)).not.toBeInTheDocument();
+    // The heading itself must also disappear — it's rendered by
+    // FindingsRecommendations itself (not an outer wrapper), specifically so
+    // toggling off doesn't leave "Findings & Recommendations" floating over
+    // nothing.
+    expect(screen.queryByText("Findings & Recommendations")).not.toBeInTheDocument();
   });
 });

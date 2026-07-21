@@ -14,13 +14,13 @@ export function FindingsRecommendations({
   findings: FindingsGroups;
   fxRate: number;
 }) {
-  const { showRecommendations } = usePresenterMode();
+  const { showExplanations } = usePresenterMode();
   // Owns its own section wrapper + heading (matching page.tsx's <Section>
   // styling) instead of being wrapped by it, specifically so that hiding
   // this in presenter mode hides the heading too — an earlier version had
   // the heading rendered by the outer wrapper regardless, so toggling
   // presenter mode left "Findings & Recommendations" floating over nothing.
-  if (!showRecommendations) return null;
+  if (!showExplanations) return null;
 
   const totalOutliers = findings.overpriced.length + findings.underpriced.length;
 
