@@ -1,7 +1,9 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { describe, it, expect } from "vitest";
 import { ReportSection } from "./ReportSection";
 import { PresenterModeProvider } from "@/lib/presenter/PresenterModeContext";
+import { PresenterModeToggle } from "./PresenterModeToggle";
 import type { PricingReport } from "@/lib/data/types";
 
 function buildReport(): PricingReport {
@@ -38,12 +40,16 @@ function buildReport(): PricingReport {
 }
 
 describe("ReportSection", () => {
-  it("renders the group title and all five sub-views", () => {
+  it("renders the group title and all five sub-views once explanations are shown", async () => {
+    const user = userEvent.setup();
     render(
       <PresenterModeProvider>
+        <PresenterModeToggle />
         <ReportSection title="Frozen Yogurt Bar" report={buildReport()} />
       </PresenterModeProvider>
     );
+
+    await user.click(screen.getByRole("button", { name: "Show Explanations" }));
 
     expect(screen.getByRole("heading", { level: 2, name: "Frozen Yogurt Bar" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { level: 3, name: "Competitive Landscape at a Glance" })).toBeInTheDocument();
@@ -51,6 +57,24 @@ describe("ReportSection", () => {
     expect(screen.getByRole("heading", { level: 3, name: "Price Positioning Map" })).toBeInTheDocument();
     expect(screen.getByText("Findings & Recommendations")).toBeInTheDocument();
     expect(screen.getByRole("heading", { level: 3, name: "Full Data Explorer" })).toBeInTheDocument();
+    expect(screen.getByTestId("category-brand-heatmap")).toBeInTheDocument();
+  });
+
+  it("hides each sub-view's intro paragraph by default, while the sub-view's real content stays visible", () => {
+    render(
+      <PresenterModeProvider>
+        <ReportSection title="Frozen Yogurt Bar" report={buildReport()} />
+      </PresenterModeProvider>
+    );
+
+    expect(screen.queryByText(/Every category against every brand in one grid/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/competitor-only average in each category/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/average price per category/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/Every priced line item, with search/)).not.toBeInTheDocument();
+
+    // Headings and the actual chart content are unaffected — only the
+    // explanatory prose paragraphs are behind the reveal.
+    expect(screen.getByRole("heading", { level: 3, name: "Competitive Landscape at a Glance" })).toBeInTheDocument();
     expect(screen.getByTestId("category-brand-heatmap")).toBeInTheDocument();
   });
 });
