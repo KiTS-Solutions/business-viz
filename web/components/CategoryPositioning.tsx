@@ -37,10 +37,10 @@ export function CategoryPositioning({ rows }: { rows: CategoryPositioningRow[] }
           <BarChart data={rows} layout="vertical" margin={{ left: 130, right: 40, top: 8, bottom: 24 }}>
             <CartesianGrid strokeDasharray="3 3" horizontal={false} />
             <XAxis type="number" tickFormatter={formatDeviation}>
-              <Label value="Deviation from market average (index points)" position="bottom" offset={0} style={{ fontSize: 12, fill: "#2f5b6b99" }} />
+              <Label value="Deviation from market average (index points)" position="bottom" offset={0} style={{ fontSize: 12, fill: "#1f4d3d99" }} />
             </XAxis>
             <YAxis type="category" dataKey="category" width={160} tick={{ fontSize: 12 }} />
-            <ReferenceLine x={0} stroke="#2f5b6b" />
+            <ReferenceLine x={0} stroke="#1f4d3d" />
             <Tooltip
               content={({ active, payload }) => {
                 if (!active || !payload || payload.length === 0) return null;
@@ -64,7 +64,7 @@ export function CategoryPositioning({ rows }: { rows: CategoryPositioningRow[] }
                 dataKey="deviation"
                 position="right"
                 formatter={(v) => (typeof v === "number" ? formatDeviation(v) : "")}
-                style={{ fontSize: 11, fill: "#2f5b6b" }}
+                style={{ fontSize: 11, fill: "#1f4d3d" }}
               />
               {rows.map((row) => (
                 <Cell

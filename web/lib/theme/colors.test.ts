@@ -2,8 +2,8 @@ import { describe, it, expect } from "vitest";
 import { BRAND_COLORS, COMPETITOR_COLORS, SEMANTIC_COLORS, CONTEXT_COLOR, CHART_COLORS } from "./colors";
 
 describe("theme colors", () => {
-  it("assigns Stories to Ocean", () => {
-    expect(BRAND_COLORS.stories).toBe("#2f5b6b");
+  it("assigns Stories its brand green", () => {
+    expect(BRAND_COLORS.stories).toBe("#1f4d3d");
   });
 
   it("assigns each of the four competitors a distinct brand accent color", () => {

@@ -4,7 +4,7 @@ import { heatmapBin } from "@/lib/analytics/heatmap";
 const BIN_STYLES: Record<string, { bg: string; text: string }> = {
   "strong-below": { bg: "#6d28d9", text: "#ffffff" },
   below: { bg: "#ddd6fe", text: "#3b1f7a" },
-  "at-par": { bg: "#f1f5f9", text: "#2f5b6b" },
+  "at-par": { bg: "#f1f5f9", text: "#1f4d3d" },
   above: { bg: "#fecaca", text: "#7a1717" },
   "strong-above": { bg: "#b91c1c", text: "#ffffff" },
   "no-data": { bg: "#ffffff", text: "#94a3b8" },

@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ocean: #2f5b6b;
-  /* Solid (not alpha) muted text token — validated at 5.3:1 against white,
-     clears WCAG AA's 4.5:1 for normal text. Using text-ocean/40|50|60|70
-     directly on readable copy was a repeat contrast failure (an independent
-     review measured as low as 2.34:1) — always use this for de-emphasized
-     TEXT. Alpha variants of ocean (bg-ocean/5, border-ocean/10, etc.) are
-     still fine for decorative backgrounds/borders, just never for text. */
-  --color-ocean-muted: #52707c;
+  --color-ocean: #1f4d3d;
+  /* Stories brand green (rebrand from Ru'ya Ocean teal). Solid (not alpha)
+     muted text token — validated at 7.67:1 against white, clears WCAG AA's
+     4.5:1 for normal text. Using text-ocean/40|50|60|70 directly on
+     readable copy was a repeat contrast failure on the old palette (an
+     independent review measured as low as 2.34:1) — always use this for
+     de-emphasized TEXT. Alpha variants of ocean (bg-ocean/5, border-ocean/10,
+     etc.) are still fine for decorative backgrounds/borders, just never for
+     text. Token name kept as "ocean" to avoid touching every component. */
+  --color-ocean-muted: #2e5c47;
   --color-lime-dust: #e7e569;
   --color-sky-aqua: #66c4dd;
   --color-deep-turquoise: #2b96af;

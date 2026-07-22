@@ -164,7 +164,7 @@ export function CategoryPriceMap({
                   x2={band.x2}
                   y1={band.y1}
                   y2={band.y2}
-                  fill="#2f5b6b"
+                  fill="#1f4d3d"
                   fillOpacity={0.08}
                   stroke="none"
                   ifOverflow="visible"
