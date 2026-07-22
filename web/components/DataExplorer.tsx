@@ -13,7 +13,8 @@ import {
   type SortDirection,
 } from "@/lib/analytics/explorer";
 import { formatDualCurrency } from "@/lib/format/currency";
-import { BRAND_COLORS, SEMANTIC_COLORS } from "@/lib/theme/colors";
+import { themedBrandColors, themedSemanticColors } from "@/lib/theme/colors";
+import { useTheme } from "@/lib/theme/ThemeContext";
 import { IndexDeviationBadge } from "@/components/IndexDeviationBadge";
 
 const PAGE_SIZE = 25;
@@ -21,11 +22,11 @@ const PAGE_SIZE = 25;
 const TIER_STYLE: Record<string, string> = {
   Value: "bg-ocean/10 text-ocean",
   Core: "bg-ocean/30 text-ocean",
-  Premium: "bg-ocean text-white",
+  Premium: "bg-brand-surface text-white",
 };
 
 const COMPARABILITY_STYLE: Record<string, string> = {
-  high: "bg-ocean text-white",
+  high: "bg-brand-surface text-white",
   medium: "border border-ocean/40 text-ocean",
   low: "border border-ocean/20 text-ocean-muted",
 };
@@ -39,6 +40,9 @@ export function DataExplorer({
   fxRate: number;
   ownBrand: string;
 }) {
+  const { theme } = useTheme();
+  const brandColors = themedBrandColors(theme);
+  const semanticColors = themedSemanticColors(theme);
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState(DEFAULT_EXPLORER_FILTERS);
@@ -164,7 +168,7 @@ export function DataExplorer({
               return (
                 <Fragment key={key}>
                   <tr
-                    className={`cursor-pointer border-t border-ocean/10 hover:bg-ocean/5 ${p.is_outlier ? "bg-amber-50" : ""}`}
+                    className={`cursor-pointer border-t border-ocean/10 hover:bg-ocean/5 ${p.is_outlier ? "bg-amber-50 dark:bg-amber-950" : ""}`}
                     onClick={() => setExpandedKey(isExpanded ? null : key)}
                   >
                     <td className="py-2 pl-1 text-ocean-muted">{isExpanded ? "▾" : "▸"}</td>
@@ -181,7 +185,7 @@ export function DataExplorer({
                       {p.own_price_lbp !== null ? formatDualCurrency(p.own_price_lbp, fxRate) : "—"}
                     </td>
                     <td className="py-2">
-                      <IndexBar value={p.price_index} comparability={p.comparability} />
+                      <IndexBar value={p.price_index} comparability={p.comparability} semanticColors={semanticColors} />
                     </td>
                     <td className="py-2">
                       {p.tier ? (
@@ -204,7 +208,7 @@ export function DataExplorer({
                           {Object.entries(p.prices_lbp).map(([brand, price]) => (
                             <div key={brand} className={brand === ownBrand ? "font-semibold" : ""}>
                               <p className="text-xs text-ocean-muted">{brand}</p>
-                              <p style={{ color: brand === ownBrand ? BRAND_COLORS.stories : undefined }}>
+                              <p style={{ color: brand === ownBrand ? brandColors.stories : undefined }}>
                                 {formatDualCurrency(price, fxRate)}
                               </p>
                             </div>
@@ -252,7 +256,15 @@ export function DataExplorer({
   );
 }
 
-function IndexBar({ value, comparability }: { value: number | null; comparability: ProductAnalytics["comparability"] }) {
+function IndexBar({
+  value,
+  comparability,
+  semanticColors,
+}: {
+  value: number | null;
+  comparability: ProductAnalytics["comparability"];
+  semanticColors: { overpriced: string; underpriced: string };
+}) {
   if (value === null) return <span className="text-ocean-muted">—</span>;
 
   // Low comparability (0-1 competitors priced) means this index isn't a
@@ -263,7 +275,7 @@ function IndexBar({ value, comparability }: { value: number | null; comparabilit
   const deviation = value - 100;
   const clamped = Math.max(-30, Math.min(30, deviation));
   const widthPct = (Math.abs(clamped) / 30) * 50; // half-bar max width on either side of center
-  const color = deviation >= 0 ? SEMANTIC_COLORS.overpriced : SEMANTIC_COLORS.underpriced;
+  const color = deviation >= 0 ? semanticColors.overpriced : semanticColors.underpriced;
 
   return (
     <div className="flex items-center gap-2" title={isReliable ? undefined : "Low comparability — based on only 1 competitor, not a reliable market read"}>

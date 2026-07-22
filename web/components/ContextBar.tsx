@@ -3,7 +3,7 @@ import { formatReportPeriod, formatFullDate } from "@/lib/format/date";
 
 export function ContextBar({ meta }: { meta: ReportMeta }) {
   return (
-    <div className="bg-ocean px-6 py-3 text-white/80">
+    <div className="bg-brand-surface px-6 py-3 text-white/80">
       <div className="mx-auto max-w-6xl">
         <p className="text-xs leading-relaxed">
           Prepared for <strong className="text-white">{meta.client}</strong> — {formatReportPeriod(meta.report_date)}

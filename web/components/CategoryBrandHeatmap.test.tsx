@@ -1,10 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
+import { ThemeProvider } from "@/lib/theme/ThemeContext";
 import { CategoryBrandHeatmap } from "./CategoryBrandHeatmap";
+
+function renderWithTheme(ui: React.ReactElement) {
+  return render(<ThemeProvider>{ui}</ThemeProvider>);
+}
 
 describe("CategoryBrandHeatmap", () => {
   it("renders a row per category and a column per brand, with the own brand marked", () => {
-    render(
+    renderWithTheme(
       <CategoryBrandHeatmap
         rows={[
           {
@@ -28,7 +33,7 @@ describe("CategoryBrandHeatmap", () => {
   });
 
   it("renders a dash for cells with no priced item at all", () => {
-    render(
+    renderWithTheme(
       <CategoryBrandHeatmap
         rows={[
           {
@@ -45,7 +50,7 @@ describe("CategoryBrandHeatmap", () => {
   });
 
   it("renders the actual price (not a blank dash) for a priced item with no peer to compare against", () => {
-    render(
+    renderWithTheme(
       <CategoryBrandHeatmap
         rows={[
           {

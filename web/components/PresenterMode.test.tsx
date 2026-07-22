@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, it, expect } from "vitest";
 import { PresenterModeProvider } from "@/lib/presenter/PresenterModeContext";
+import { ThemeProvider } from "@/lib/theme/ThemeContext";
 import { PresenterModeToggle } from "./PresenterModeToggle";
 import { FindingsRecommendations } from "./FindingsRecommendations";
 import type { FindingsGroups } from "@/lib/analytics/findings";
@@ -28,10 +29,12 @@ describe("Presenter mode", () => {
   it("hides the Findings section by default, and shows/hides it on toggle", async () => {
     const user = userEvent.setup();
     render(
-      <PresenterModeProvider>
-        <PresenterModeToggle />
-        <FindingsRecommendations findings={findings} fxRate={89600} />
-      </PresenterModeProvider>
+      <ThemeProvider>
+        <PresenterModeProvider>
+          <PresenterModeToggle />
+          <FindingsRecommendations findings={findings} fxRate={89600} />
+        </PresenterModeProvider>
+      </ThemeProvider>
     );
 
     // Explanations are hidden by default now (was shown by default before).

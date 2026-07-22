@@ -1,4 +1,7 @@
-import { SEMANTIC_COLORS } from "@/lib/theme/colors";
+"use client";
+
+import { themedSemanticColors } from "@/lib/theme/colors";
+import { useTheme } from "@/lib/theme/ThemeContext";
 
 /**
  * Small colored arrow + percent, shown alongside any raw price-index number
@@ -20,6 +23,7 @@ export function IndexDeviationBadge({
    * color could clash or read poorly against the cell's own bg color. */
   inheritColor?: boolean;
 }) {
+  const { theme } = useTheme();
   if (value === null) return null;
 
   const deviation = Math.round(value - 100);
@@ -31,7 +35,8 @@ export function IndexDeviationBadge({
     );
   }
 
-  const color = deviation > 0 ? SEMANTIC_COLORS.overpriced : SEMANTIC_COLORS.underpriced;
+  const semanticColors = themedSemanticColors(theme);
+  const color = deviation > 0 ? semanticColors.overpriced : semanticColors.underpriced;
   const arrow = deviation > 0 ? "▲" : "▼";
 
   return (

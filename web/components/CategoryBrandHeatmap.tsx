@@ -1,6 +1,9 @@
+"use client";
+
 import type { HeatmapCell, HeatmapRow } from "@/lib/analytics/heatmap";
 import { heatmapBin } from "@/lib/analytics/heatmap";
 import { IndexDeviationBadge } from "@/components/IndexDeviationBadge";
+import { useTheme } from "@/lib/theme/ThemeContext";
 
 const BIN_STYLES: Record<string, { bg: string; text: string }> = {
   "strong-below": { bg: "#6d28d9", text: "#ffffff" },
@@ -12,6 +15,24 @@ const BIN_STYLES: Record<string, { bg: string; text: string }> = {
 };
 
 const NO_PEER_STYLE = { bg: "#eef2f4", text: "#52707c" };
+
+// Dark-mode bins. strong-below/strong-above are already dark, saturated
+// fills that read fine as self-contained colored badges regardless of page
+// theme (same reasoning as --color-brand-surface), so those two are
+// unchanged. The three near-white light-mode bins (below, at-par, above,
+// no-data) would look like a bright cutout on a dark page, so those get
+// dark-appropriate equivalents — each contrast-checked (text vs. its own
+// bg): below 9.6:1, at-par 7.1:1, above 8.7:1, no-data 5.3:1.
+const DARK_BIN_STYLES: Record<string, { bg: string; text: string }> = {
+  "strong-below": { bg: "#6d28d9", text: "#ffffff" },
+  below: { bg: "#2f2145", text: "#d8c9fa" },
+  "at-par": { bg: "#1c2a23", text: "#9fb9ac" },
+  above: { bg: "#3a1e1e", text: "#f3b4b4" },
+  "strong-above": { bg: "#b91c1c", text: "#ffffff" },
+  "no-data": { bg: "#0f1a16", text: "#7c9187" },
+};
+
+const DARK_NO_PEER_STYLE = { bg: "#23322b", text: "#9fb9ac" };
 
 function cellTitle(cell: HeatmapCell, category: string): string {
   if (cell.status === "priced") return `${cell.brand} — ${category}: index ${cell.indexValue}`;
@@ -35,22 +56,26 @@ function cellContent(cell: HeatmapCell) {
 }
 
 export function CategoryBrandHeatmap({ rows, brands, ownBrand }: { rows: HeatmapRow[]; brands: string[]; ownBrand: string }) {
+  const { theme } = useTheme();
+  const binStyles = theme === "dark" ? DARK_BIN_STYLES : BIN_STYLES;
+  const noPeerStyle = theme === "dark" ? DARK_NO_PEER_STYLE : NO_PEER_STYLE;
+
   return (
     <div aria-label="Category by Brand Price Heatmap" data-testid="category-brand-heatmap">
       <div className="mb-3 flex flex-wrap items-center gap-4 text-xs text-ocean-muted">
-        <LegendCell style={BIN_STYLES["strong-below"]} label="15%+ below peers" />
-        <LegendCell style={BIN_STYLES["below"]} label="5–15% below" />
-        <LegendCell style={BIN_STYLES["at-par"]} label="within 5% (at par)" />
-        <LegendCell style={BIN_STYLES["above"]} label="5–15% above" />
-        <LegendCell style={BIN_STYLES["strong-above"]} label="15%+ above peers" />
-        <LegendCell style={NO_PEER_STYLE} label="priced, but no competitor here to compare to" />
-        <LegendCell style={BIN_STYLES["no-data"]} label="not sold in this category" />
+        <LegendCell style={binStyles["strong-below"]} label="15%+ below peers" />
+        <LegendCell style={binStyles["below"]} label="5–15% below" />
+        <LegendCell style={binStyles["at-par"]} label="within 5% (at par)" />
+        <LegendCell style={binStyles["above"]} label="5–15% above" />
+        <LegendCell style={binStyles["strong-above"]} label="15%+ above peers" />
+        <LegendCell style={noPeerStyle} label="priced, but no competitor here to compare to" />
+        <LegendCell style={binStyles["no-data"]} label="not sold in this category" />
       </div>
       <div className="overflow-x-auto">
         <table className="w-full border-separate border-spacing-1 text-xs">
           <thead>
             <tr>
-              <th className="sticky left-0 bg-white p-1 text-left font-normal text-ocean-muted">Category</th>
+              <th className="sticky left-0 bg-surface-2 p-1 text-left font-normal text-ocean-muted">Category</th>
               {brands.map((b) => (
                 <th
                   key={b}
@@ -64,11 +89,11 @@ export function CategoryBrandHeatmap({ rows, brands, ownBrand }: { rows: Heatmap
           <tbody>
             {rows.map((row) => (
               <tr key={row.category}>
-                <th scope="row" className="sticky left-0 bg-white p-1 text-left font-normal text-ocean-muted">
+                <th scope="row" className="sticky left-0 bg-surface-2 p-1 text-left font-normal text-ocean-muted">
                   {row.category}
                 </th>
                 {row.cells.map((cell) => {
-                  const style = cell.status === "priced" ? BIN_STYLES[heatmapBin(cell.indexValue)] : cell.status === "no-peer" ? NO_PEER_STYLE : BIN_STYLES["no-data"];
+                  const style = cell.status === "priced" ? binStyles[heatmapBin(cell.indexValue)] : cell.status === "no-peer" ? noPeerStyle : binStyles["no-data"];
                   return (
                     <td
                       key={cell.brand}

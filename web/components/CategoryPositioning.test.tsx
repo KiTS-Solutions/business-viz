@@ -1,10 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
+import { ThemeProvider } from "@/lib/theme/ThemeContext";
 import { CategoryPositioning } from "./CategoryPositioning";
 
 describe("CategoryPositioning", () => {
   it("renders without crashing for a set of category rows", () => {
     render(
+      <ThemeProvider>
       <CategoryPositioning
         rows={[
           {
@@ -25,6 +27,7 @@ describe("CategoryPositioning", () => {
           },
         ]}
       />
+      </ThemeProvider>
     );
 
     expect(screen.getByTestId("category-positioning")).toBeInTheDocument();

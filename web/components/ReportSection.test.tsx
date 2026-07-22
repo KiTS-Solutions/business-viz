@@ -3,8 +3,13 @@ import userEvent from "@testing-library/user-event";
 import { describe, it, expect } from "vitest";
 import { ReportSection } from "./ReportSection";
 import { PresenterModeProvider } from "@/lib/presenter/PresenterModeContext";
+import { ThemeProvider } from "@/lib/theme/ThemeContext";
 import { PresenterModeToggle } from "./PresenterModeToggle";
 import type { PricingReport } from "@/lib/data/types";
+
+function renderWithProviders(ui: React.ReactElement) {
+  return render(<ThemeProvider><PresenterModeProvider>{ui}</PresenterModeProvider></ThemeProvider>);
+}
 
 function buildReport(): PricingReport {
   return {
@@ -42,11 +47,11 @@ function buildReport(): PricingReport {
 describe("ReportSection", () => {
   it("renders the group title and all five sub-views once explanations are shown", async () => {
     const user = userEvent.setup();
-    render(
-      <PresenterModeProvider>
+    renderWithProviders(
+      <>
         <PresenterModeToggle />
         <ReportSection title="Frozen Yogurt Bar" report={buildReport()} />
-      </PresenterModeProvider>
+      </>
     );
 
     await user.click(screen.getByRole("button", { name: "Show Explanations" }));
@@ -61,11 +66,7 @@ describe("ReportSection", () => {
   });
 
   it("hides each sub-view's intro paragraph by default, while the sub-view's real content stays visible", () => {
-    render(
-      <PresenterModeProvider>
-        <ReportSection title="Frozen Yogurt Bar" report={buildReport()} />
-      </PresenterModeProvider>
-    );
+    renderWithProviders(<ReportSection title="Frozen Yogurt Bar" report={buildReport()} />);
 
     expect(screen.queryByText(/Every category against every brand in one grid/)).not.toBeInTheDocument();
     expect(screen.queryByText(/competitor-only average in each category/)).not.toBeInTheDocument();
@@ -79,24 +80,18 @@ describe("ReportSection", () => {
   });
 
   it("renders extra content between Price Positioning Map and Full Data Explorer when provided", () => {
-    render(
-      <PresenterModeProvider>
-        <ReportSection
-          title="Frozen Yogurt Bar"
-          report={buildReport()}
-          extra={<div data-testid="cup-size-slot">Cup sizes</div>}
-        />
-      </PresenterModeProvider>
+    renderWithProviders(
+      <ReportSection
+        title="Frozen Yogurt Bar"
+        report={buildReport()}
+        extra={<div data-testid="cup-size-slot">Cup sizes</div>}
+      />
     );
     expect(screen.getByTestId("cup-size-slot")).toBeInTheDocument();
   });
 
   it("renders nothing extra when the extra prop is omitted", () => {
-    render(
-      <PresenterModeProvider>
-        <ReportSection title="Frozen Yogurt Bar" report={buildReport()} />
-      </PresenterModeProvider>
-    );
+    renderWithProviders(<ReportSection title="Frozen Yogurt Bar" report={buildReport()} />);
     expect(screen.queryByTestId("cup-size-slot")).not.toBeInTheDocument();
   });
 });

@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Tailwind v4 attribute-based dark mode: `dark:` utilities activate when the
+   theme toggle (see lib/theme/ThemeContext.tsx) stamps data-theme="dark" on
+   <html> — not the OS media query, since the toggle must be the source of
+   truth once a viewer has picked a theme explicitly. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @theme {
   --color-ocean: #1f4d3d;
   /* Stories brand green (rebrand from Ru'ya Ocean teal). Solid (not alpha)
@@ -9,19 +15,45 @@
      independent review measured as low as 2.34:1) — always use this for
      de-emphasized TEXT. Alpha variants of ocean (bg-ocean/5, border-ocean/10,
      etc.) are still fine for decorative backgrounds/borders, just never for
-     text. Token name kept as "ocean" to avoid touching every component. */
+     text. Token name kept as "ocean" to avoid touching every component.
+     THEME-AWARE: this token's value is overridden for dark mode below —
+     every text-ocean/border-ocean/bg-ocean/ring-ocean utility (~115 uses)
+     re-themes automatically with no component changes needed. The one
+     exception is a handful of OPAQUE brand-surface fills (Context Bar,
+     Premium/High-comparability chips) that must stay deep green in both
+     themes — those use --color-brand-surface instead, which never swaps. */
   --color-ocean-muted: #2e5c47;
+  --color-brand-surface: #1f4d3d;
   --color-lime-dust: #d9b382;
   --color-sky-aqua: #66c4dd;
   --color-deep-turquoise: #2b96af;
   --color-burnt-coral: #ea5c3f;
   --color-sunset-gold: #f7b759;
 
+  /* Page/card surfaces — distinct from --color-ocean's ink role. Light mode
+     values match the plain white the site already used before dark mode
+     existed. */
+  --color-page-bg: #ffffff;
+  --color-surface-2: #ffffff;
+
   --font-display: var(--font-clash-display), sans-serif;
   --font-body: var(--font-montserrat), sans-serif;
 }
 
+/* Dark theme overrides — validated per-token against these exact surfaces
+   (#0f1a16 page / #1c2a23 card), not an automatic lightening of the light
+   values (e.g. ink #e7f3ee clears 15.6:1 on page-bg, 14.4:1 on surface-2;
+   ocean-muted #9fb9ac clears 8.5:1 / 7.8:1). Chart/data colors (competitor
+   series, heatmap bins, semantic red/violet) are separately re-validated in
+   lib/theme/colors.ts — a structural ink swap here doesn't touch those. */
+:root[data-theme="dark"] {
+  --color-ocean: #e7f3ee;
+  --color-ocean-muted: #9fb9ac;
+  --color-page-bg: #0f1a16;
+  --color-surface-2: #1c2a23;
+}
+
 body {
-  @apply bg-white text-ocean;
+  @apply bg-page-bg text-ocean;
   font-family: var(--font-body);
 }

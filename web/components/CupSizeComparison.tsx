@@ -1,5 +1,4 @@
 import type { CupSizeTable, CupSizeTier } from "@/lib/data/cupSizeTypes";
-import { BRAND_COLORS } from "@/lib/theme/colors";
 
 const TIER_LABELS: Record<CupSizeTier, string> = {
   S: "Small",
@@ -28,7 +27,6 @@ export function CupSizeComparison({ table, ownBrand }: { table: CupSizeTable; ow
                 <th
                   key={brand}
                   className={`p-1 text-center font-normal ${brand === ownBrand ? "font-semibold text-ocean" : "text-ocean-muted"}`}
-                  style={brand === ownBrand ? { color: BRAND_COLORS.stories } : undefined}
                 >
                   {brand}
                 </th>

@@ -14,6 +14,8 @@ import { ContextBar } from "@/components/ContextBar";
 import { Methodology } from "@/components/Methodology";
 import { Section } from "@/components/Section";
 import { PresenterModeProvider } from "@/lib/presenter/PresenterModeContext";
+import { ThemeProvider } from "@/lib/theme/ThemeContext";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const PENDING_CATEGORIES = [
   "Milkshakes",
@@ -62,9 +64,10 @@ export default function Home() {
   ];
 
   return (
+    <ThemeProvider>
     <PresenterModeProvider>
       {/* Cover */}
-      <div className="border-b border-ocean/10 bg-white px-6 pb-10 pt-8">
+      <div className="border-b border-ocean/10 bg-page-bg px-6 pb-10 pt-8">
         <div className="mx-auto flex max-w-6xl items-start justify-between gap-4">
           <div className="flex items-center gap-2 sm:gap-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -73,7 +76,10 @@ export default function Home() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={withBasePath("/stories-logo.png")} alt="Stories" className="h-6 w-auto sm:h-7" />
           </div>
-          <PresenterModeToggle />
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <PresenterModeToggle />
+          </div>
         </div>
         <div className="mx-auto mt-10 max-w-6xl">
           <p className="text-xs uppercase tracking-widest text-ocean-muted">Pricing Strategy Advisory</p>
@@ -135,14 +141,19 @@ export default function Home() {
       </main>
 
       <footer className="mt-4 border-t border-ocean/10 bg-ocean/5 px-6 py-6 text-xs text-ocean-muted">
-        <div className="mx-auto max-w-6xl">
-          <p>Confidential — prepared for {mainReport.meta.client} by Ru&apos;ya 360. Not for external distribution.</p>
-          <p className="mt-1">
-            Report period: {formatReportPeriod(mainReport.meta.report_date)} · Source:{" "}
-            {mainReport.meta.generated_from ? cleanDisplayFileName(mainReport.meta.generated_from) : "internal pricing data"}.
-          </p>
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+          <div>
+            <p>Confidential — prepared for {mainReport.meta.client} by Ru&apos;ya 360. Not for external distribution.</p>
+            <p className="mt-1">
+              Report period: {formatReportPeriod(mainReport.meta.report_date)} · Source:{" "}
+              {mainReport.meta.generated_from ? cleanDisplayFileName(mainReport.meta.generated_from) : "internal pricing data"}.
+            </p>
+          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={withBasePath("/stories-logo.png")} alt="Stories" className="h-5 w-auto shrink-0 opacity-70" />
         </div>
       </footer>
     </PresenterModeProvider>
+    </ThemeProvider>
   );
 }

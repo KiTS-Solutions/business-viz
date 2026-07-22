@@ -36,7 +36,7 @@ export function FindingsRecommendations({
         title="Repricing Candidates — Priced Above Market"
         items={findings.overpriced}
         fxRate={fxRate}
-        accentClassName="text-red-600"
+        accentClassName="text-red-600 dark:text-red-400"
         recommendation={(item) => {
           const gap = item.own_price_lbp !== null && item.competitor_avg_lbp !== null
             ? item.own_price_lbp - item.competitor_avg_lbp
@@ -50,7 +50,7 @@ export function FindingsRecommendations({
         title="Trade-Up Opportunities — Priced Below Market"
         items={findings.underpriced}
         fxRate={fxRate}
-        accentClassName="text-violet-600"
+        accentClassName="text-violet-600 dark:text-violet-400"
         recommendation={(item) => {
           const gap = item.own_price_lbp !== null && item.competitor_avg_lbp !== null
             ? item.competitor_avg_lbp - item.own_price_lbp

@@ -15,8 +15,12 @@ import {
 } from "recharts";
 import type { CategoryPriceMapRow } from "@/lib/analytics/positioningMap";
 import { filterCategoryPriceMap } from "@/lib/analytics/positioningMap";
-import { BRAND_COLORS, CHART_COLORS, CONTEXT_COLOR } from "@/lib/theme/colors";
+import { themedBrandColors, themedChartColors, themedContextColor } from "@/lib/theme/colors";
+import { useTheme } from "@/lib/theme/ThemeContext";
 import { formatDualCurrency } from "@/lib/format/currency";
+
+const INK = { light: "#1f4d3d", dark: "#e7f3ee" };
+const OWN_BRAND_STROKE = { light: "#1a1a1a", dark: "#f4f9f6" };
 
 interface PricePoint {
   category: string;
@@ -46,7 +50,7 @@ function PointTooltip({
   if (!active || !payload || payload.length === 0) return null;
   const point = payload[0].payload;
   return (
-    <div className="rounded-md border border-ocean/10 bg-white px-3 py-2 text-sm shadow-md">
+    <div className="rounded-md border border-ocean/10 bg-surface-2 px-3 py-2 text-sm shadow-md">
       <p className={point.isOwnBrand ? "font-semibold text-ocean" : "text-ocean-muted"}>{point.brand}</p>
       <p className="text-ocean-muted">{formatDualCurrency(point.avgPriceLbp, fxRate)}</p>
       <p className="text-xs text-ocean-muted">
@@ -65,6 +69,12 @@ export function CategoryPriceMap({
   fxRate: number;
   ownBrand: string;
 }) {
+  const { theme } = useTheme();
+  const brandColors = themedBrandColors(theme);
+  const chartColors = themedChartColors(theme);
+  const contextColor = themedContextColor(theme);
+  const ink = theme === "dark" ? INK.dark : INK.light;
+  const ownBrandStroke = theme === "dark" ? OWN_BRAND_STROKE.dark : OWN_BRAND_STROKE.light;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const visibleRows = useMemo(
     () => filterCategoryPriceMap(rows, selectedCategory),
@@ -122,9 +132,9 @@ export function CategoryPriceMap({
           ))}
         </select>
         <div className="ml-auto flex flex-wrap items-center gap-4 text-xs text-ocean-muted">
-          <LegendChip color={BRAND_COLORS.stories} label={ownBrand} bold />
+          <LegendChip color={brandColors.stories} label={ownBrand} bold />
           {competitorBrands.map((b) => (
-            <LegendChip key={b} color={CHART_COLORS[b] ?? CONTEXT_COLOR} label={b} />
+            <LegendChip key={b} color={chartColors[b] ?? contextColor} label={b} />
           ))}
           <span className="flex items-center gap-1">
             <span className="inline-block h-2 w-4 rounded-sm bg-ocean/10" />
@@ -146,6 +156,7 @@ export function CategoryPriceMap({
                 type="number"
                 dataKey="avgPriceLbp"
                 tickFormatter={(v: number) => `${Math.round(v / 1000)}k`}
+                tick={{ fill: ink, fontSize: 12 }}
               />
               <YAxis
                 type="number"
@@ -155,6 +166,7 @@ export function CategoryPriceMap({
                 ticks={visibleRows.map((r) => categoryIndexOf(r.category, visibleRows))}
                 width={130}
                 interval={0}
+                tick={{ fill: ink, fontSize: 12 }}
               />
               <ZAxis range={[60, 60]} />
               {rangeBands.map((band) => (
@@ -164,7 +176,7 @@ export function CategoryPriceMap({
                   x2={band.x2}
                   y1={band.y1}
                   y2={band.y2}
-                  fill="#1f4d3d"
+                  fill={ink}
                   fillOpacity={0.08}
                   stroke="none"
                   ifOverflow="visible"
@@ -175,8 +187,8 @@ export function CategoryPriceMap({
                 {points.map((p, i) => (
                   <Cell
                     key={`${p.category}-${p.brand}-${i}`}
-                    fill={p.isOwnBrand ? BRAND_COLORS.stories : CHART_COLORS[p.brand] ?? CONTEXT_COLOR}
-                    stroke={p.isOwnBrand ? "#1a1a1a" : "none"}
+                    fill={p.isOwnBrand ? brandColors.stories : chartColors[p.brand] ?? contextColor}
+                    stroke={p.isOwnBrand ? ownBrandStroke : "none"}
                     strokeWidth={p.isOwnBrand ? 1.5 : 0}
                     r={p.isOwnBrand ? 7 : 5}
                   />
